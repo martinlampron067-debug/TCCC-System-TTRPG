@@ -9,17 +9,20 @@
         header { padding: 60px 20px; text-align: center; border-bottom: 3px solid #b8962e; background: linear-gradient(to bottom, #1a1a1a, #0a0a0a); }
         h1 { color: #b8962e; margin: 0; letter-spacing: 5px; font-size: 2.5rem; text-transform: uppercase; }
         .tagline { color: #888; margin-top: 10px; font-size: 1.1rem; text-transform: uppercase; }
-        .container { max-width: 900px; margin: auto; padding: 40px 20px; }
-        .section { margin-bottom: 50px; padding: 30px; border: 1px solid #333; border-radius: 4px; background: #111; position: relative; }
+        .container { max-width: 1000px; margin: auto; padding: 40px 20px; }
+        .section { margin-bottom: 50px; padding: 30px; border: 1px solid #333; border-radius: 4px; background: #111; display: flex; flex-wrap: wrap; gap: 30px; align-items: flex-start; }
+        .content-block { flex: 1; min-width: 300px; }
+        .book-cover { width: 250px; height: auto; border: 1px solid #444; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.7); transition: 0.3s; }
+        .book-cover:hover { border-color: #b8962e; transform: scale(1.02); }
         h2 { color: #b8962e; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 10px; margin-top: 0; }
         .highlight { color: #b8962e; font-weight: bold; }
-        .feature-item { margin-bottom: 15px; display: block; border-left: 2px solid #b8962e; padding-left: 15px; }
-        .quote { font-style: italic; color: #b8962e; background: #1a1a1a; padding: 20px; border-radius: 4px; margin: 20px 0; border: 1px dashed #444; text-align: center; }
-        .launch-date { display: inline-block; background: #b8962e; color: #000; padding: 2px 8px; font-weight: bold; border-radius: 2px; font-size: 0.9rem; margin-bottom: 10px; }
-        .cyber-launch { background: #00f2ff; color: #000; }
-        .btn { display: inline-block; padding: 12px 25px; background: #b8962e; color: #000; text-decoration: none; font-weight: bold; border-radius: 2px; transition: 0.3s; margin-top: 15px; text-transform: uppercase; border: none; }
+        .feature-item { margin-bottom: 15px; display: block; border-left: 2px solid #b8962e; padding-left: 15px; font-size: 0.95rem; }
+        .quote { font-style: italic; color: #b8962e; background: #1a1a1a; padding: 25px; border-radius: 4px; margin: 20px 0; border: 1px dashed #444; text-align: center; width: 100%; font-size: 1.1rem; }
+        .launch-date { display: inline-block; background: #b8962e; color: #000; padding: 4px 12px; font-weight: bold; border-radius: 2px; font-size: 0.85rem; margin-bottom: 15px; text-transform: uppercase; }
+        .btn { display: inline-block; padding: 14px 30px; background: #b8962e; color: #000; text-decoration: none; font-weight: bold; border-radius: 2px; transition: 0.3s; margin-top: 20px; text-transform: uppercase; border: none; }
         .btn:hover { background: #fff; color: #000; }
-        footer { text-align: center; padding: 50px; font-size: 0.8rem; color: #555; border-top: 1px solid #222; letter-spacing: 1px; }
+        footer { text-align: center; padding: 60px; font-size: 0.85rem; color: #555; border-top: 1px solid #222; letter-spacing: 1px; }
+        @media (max-width: 768px) { .section { flex-direction: column; align-items: center; text-align: center; } .book-cover { width: 100%; max-width: 300px; } .feature-item { border-left: none; padding-left: 0; } }
     </style>
 </head>
 <body>
@@ -33,46 +36,36 @@
 <div class="container">
 
     <div class="section">
-        <div class="launch-date">EXPECTED 2027</div>
-        <h2>SAECULUM: BLOOD OF AGES (CORE ENGINE)</h2>
-        <p>A genre-agnostic toolkit designed for every type of adventure. From gritty historical realism to far-future tactical operations, this system provides the tools for high-stakes play without the bloat.</p>
-        
-        <div class="feature-item">
-            <span class="highlight">SCALABLE DICE RESOLUTION:</span> 
-            No d20s. Attributes and Skills are represented by dice ranging from <strong>d4 up to d12</strong>. As your expertise grows, your dice scale, creating a predictable <strong>Bell Curve</strong> that rewards true competence over random chance.
+        <div class="content-block">
+            <div class="launch-date">EXPECTED 2027</div>
+            <h2>SAECULUM: BLOOD OF AGES</h2>
+            <p>A genre-agnostic toolkit across all ages of human evolution. Whether you are running primitive survival, a desert raid, or space opera, the mechanics adapt while keeping math consistent.</p>
+            <div class="feature-item"><span class="highlight">SCALABLE DICE:</span> No d20s. Scale from d4 to d12 for Attributes and Skills to create a predictable Bell Curve.</div>
+            <div class="feature-item"><span class="highlight">INJURY SYSTEM:</span> Track impacts from Stun to Lethal. Damage directly impacts effectiveness.</div>
         </div>
-
-        <div class="feature-item">
-            <span class="highlight">INJURY OVER HIT POINTS:</span> 
-            Traditional health bars are gone. Instead, track every impact through a realistic injury system ranging from <strong>Stun to Lethal</strong>. Damage directly impacts your effectiveness in real-time.
-        </div>
-
-        <div class="feature-item">
-            <span class="highlight">GENRE-AGNOSTIC ADVENTURE:</span> 
-            A universal toolkit across all ages of human evolution. Whether you are running a primitive survival struggle, a desert raid, or high-tech space opera, the mechanics adapt while keeping the math consistent.
-        </div>
+        <img src="cover-saeculum.jpg" alt="Saeculum Core Cover" class="book-cover">
     </div>
 
     <div class="section" style="border-color: #00f2ff44;">
-        <div class="launch-date cyber-launch">EXPECTED 2027</div>
-        <h2 style="color: #00f2ff; border-bottom-color: #00f2ff;">SAECULUM: CARNEFERREUS</h2>
-        <p>The expansion for the Saeculum engine. High-consequence survival in a fractured post-apocalyptic / cyberpunk North America.</p>
+        <div class="content-block">
+            <div class="launch-date" style="background:#00f2ff; color:#000;">EXPECTED 2027</div>
+            <h2 style="color: #00f2ff; border-bottom-color: #00f2ff;">SAECULUM: CARNEFERREUS</h2>
+            <p>The expansion for the Saeculum engine. High-consequence survival in a fractured post-apocalyptic / cyberpunk North America.</p>
+            <div class="feature-item"><span class="highlight" style="color: #00f2ff;">DATA HUSTLE:</span> Gritty "Cracking" mechanics where digital sabotage happens in meat-space.</div>
+            <div class="feature-item"><span class="highlight" style="color: #00f2ff;">CHROME SICKNESS:</span> Manage the biological cost of high-tier augmentations and Pain Editors.</div>
+        </div>
+        <img src="cover-carneferreus.jpg" alt="Carneferreus Expansion Cover" class="book-cover">
         <div class="quote">"Audacity is how you get scrapped, audacity with a good plan is how legends are born."</div>
-        <div class="feature-item"><span class="highlight" style="color: #00f2ff;">DATA HUSTLE:</span> Gritty "Cracking" mechanics where digital sabotage happens in meat-space with tactical risks.</div>
-        <div class="feature-item"><span class="highlight" style="color: #00f2ff;">CHROME SICKNESS:</span> Manage the biological cost of high-tier augmentations like Pain Editors and Full Shell Conversions.</div>
     </div>
 
     <div class="section" style="border-color: #4a7c3f;">
-        <div class="launch-date" style="background: #4a7c3f; color: #fff;">LIVE NOW</div>
-        <h2 style="color: #6bab5c;">TCCC LITE: THE BLACKJACK SYSTEM</h2>
-        <p>An over-simplified version of the TCCC system using blackjack resolution for fast, almost zero-prep Western scenarios. Created as the perfect filler game between sessions or for when a player is late or cannot show up at the last minute.</p>
-        
-        <div style="margin-top: 20px;">
-            <span class="highlight" style="color:#6bab5c;">READY TO PLAY:</span><br>
-            • Trouble at the Black Jack Saloon<br>
-            • The Hunt for "Small" Whesterfield<br>
-            <a href="https://www.drivethrurpg.com/en/publisher/33737/martin-lampron" target="_blank" class="btn" style="background: #4a7c3f; color: #fff;">Download on DriveThruRPG</a>
+        <div class="content-block">
+            <div class="launch-date" style="background: #4a7c3f; color: #fff;">LIVE NOW</div>
+            <h2 style="color: #6bab5c;">TCCC LITE: THE BLACKJACK SYSTEM</h2>
+            <p>An over-simplified version of the TCCC system using blackjack resolution for fast, almost zero-prep Western scenarios. Perfect for filler sessions or late arrivals.</p>
+            <a href="https://www.drivethrurpg.com/en/publisher/33737/martin-lampron" target="_blank" class="btn" style="background: #4a7c3f; color: #fff;">Visit DriveThruRPG</a>
         </div>
+        <img src="cover-blackjack.jpg" alt="TCCC Lite Blackjack Cover" class="book-cover">
     </div>
 
 </div>
