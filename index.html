@@ -19,9 +19,12 @@
         .feature-item { margin-bottom: 15px; display: block; border-left: 2px solid #b8962e; padding-left: 15px; font-size: 0.95rem; }
         .quote { font-style: italic; color: #b8962e; background: #1a1a1a; padding: 25px; border-radius: 4px; margin: 20px 0; border: 1px dashed #444; text-align: center; width: 100%; font-size: 1.1rem; }
         .launch-date { display: inline-block; background: #b8962e; color: #000; padding: 4px 12px; font-weight: bold; border-radius: 2px; font-size: 0.85rem; margin-bottom: 15px; text-transform: uppercase; }
-        .btn { display: inline-block; padding: 14px 30px; background: #b8962e; color: #000; text-decoration: none; font-weight: bold; border-radius: 2px; transition: 0.3s; margin-top: 20px; text-transform: uppercase; border: none; }
+        .btn { display: inline-block; padding: 14px 30px; background: #b8962e; color: #000; text-decoration: none; font-weight: bold; border-radius: 2px; transition: 0.3s; margin-top: 20px; text-transform: uppercase; border: none; text-align: center; }
         .btn:hover { background: #fff; color: #000; }
+        .btn-discord { background: #5865F2; color: #fff; }
+        .btn-discord:hover { background: #4752c4; color: #fff; }
         .contact-section { text-align: center; padding: 40px; border: 1px solid #b8962e; border-radius: 4px; background: #1a1a1a; margin-top: 20px; }
+        .social-grid { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 10px; }
         footer { text-align: center; padding: 60px; font-size: 0.85rem; color: #555; border-top: 1px solid #222; letter-spacing: 1px; }
         @media (max-width: 768px) { .section { flex-direction: column; align-items: center; text-align: center; } .book-cover { width: 100%; max-width: 300px; } .feature-item { border-left: none; padding-left: 0; } }
     </style>
@@ -72,7 +75,10 @@
     <div class="contact-section">
         <h2 style="margin-top:0;">JOIN THE OPERATION</h2>
         <p>Get the latest tactical briefings, dev logs, and community playtests.</p>
-        <a href="https://www.facebook.com/SaeculumBloodOfAges?locale=fr_CA" target="_blank" class="btn">Follow on Facebook</a>
+        <div class="social-grid">
+            <a href="https://www.facebook.com/SaeculumBloodOfAges?locale=fr_CA" target="_blank" class="btn">Facebook</a>
+            <a href="https://discord.gg/3a33jT5Q6F" target="_blank" class="btn btn-discord">Discord</a>
+        </div>
     </div>
 
 </div>
