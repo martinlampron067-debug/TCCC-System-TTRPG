@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3HL00VZD9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B3HL00VZD9');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TCCC System | Realistic RPG Toolkit</title>
 
     <meta name="title" content="TCCC System | Tactical Combat & Creative Cinematic RPG">
-    <meta name="description" content="A realistic RPG toolkit by Martin Lampron. Featuring scalable d4-d12 resolution, injury-based combat (Stun to Lethal), and genre-agnostic mechanics from primitive to space opera.">
-    <meta name="keywords" content="TCCC System, Saeculum Blood of Ages, Carneferreus, RPG, Tabletop, Tactical Combat, Realistic RPG, Martin Lampron, Blackjack RPG">
+    <meta name="description" content="A realistic RPG toolkit by Martin Lampron. Featuring scalable d4-d12 resolution and injury-based combat.">
     <meta name="author" content="Martin Lampron">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://martinlampron067-debug.github.io/TCCC-System-TTRPG/">
     <meta property="og:title" content="TCCC System | Realistic RPG Toolkit">
     <meta property="og:description" content="No d20s. No Hit Points. Just tactical precision. Experience the TCCC System and the Saeculum engine.">
-    
     <meta property="og:image" content="https://martinlampron067-debug.github.io/TCCC-System-TTRPG/mini.jpg">
-    <meta property="og:image:secure_url" content="https://martinlampron067-debug.github.io/TCCC-System-TTRPG/mini.jpg">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="TCCC System RPG">
-    <meta property="twitter:description" content="Veteran-designed tactical RPG engine. Scalable dice, realistic injury system, and genre-agnostic play.">
 
     <style>
         * { box-sizing: border-box; } 
@@ -52,67 +50,24 @@
 
         /* CONTACT FORM STYLING */
         .tccc-input { 
-            width: 100%; 
-            background: #000; 
-            border: 1px solid #333; 
-            color: #b8962e; 
-            padding: 12px; 
-            font-family: 'Courier New', monospace; 
-            margin-bottom: 10px;
-            outline: none;
-            border-radius: 2px;
+            width: 100%; background: #000; border: 1px solid #333; color: #b8962e; padding: 12px; 
+            font-family: 'Courier New', monospace; margin-bottom: 10px; outline: none; border-radius: 2px;
         }
         .tccc-input:focus { border-color: #b8962e; }
 
         /* FINAL MOBILE STABILIZATION & SCALING */
         @media (max-width: 768px) { 
-            body { font-size: 18px; } /* Increase base text size for mobile readability */
-            
+            body { font-size: 18px; } 
             header { padding: 40px 10px; }
             h1 { font-size: 1.8rem; letter-spacing: 3px; }
-            
             .container { padding: 10px; }
-            .section { 
-                display: block; 
-                padding: 20px; 
-                width: 100%; 
-                margin-left: 0;
-                margin-right: 0;
-            } 
-            .content-block { 
-                width: 100%; 
-                text-align: center; 
-                margin-bottom: 20px; 
-            }
-            .book-cover { 
-                width: 100%; 
-                max-width: 260px; 
-                margin: 20px auto !important; 
-            } 
-            .feature-item { 
-                border-left: none; 
-                padding: 12px 0; 
-                border-bottom: 1px solid #333; 
-                text-align: center;
-                font-size: 1rem;
-            } 
-            .quote { 
-                width: 100%; 
-                margin: 20px 0; 
-                font-size: 1.1rem;
-                padding: 15px;
-            }
-
-            /* Prevent auto-zoom on iOS and make form easier to use */
-            .tccc-input { 
-                font-size: 16px !important; 
-                padding: 15px; 
-            }
-            .btn { 
-                width: 100%; 
-                padding: 18px 20px; 
-                font-size: 1rem;
-            }
+            .section { display: block; padding: 20px; width: 100%; } 
+            .content-block { width: 100%; text-align: center; margin-bottom: 20px; }
+            .book-cover { width: 100%; max-width: 260px; margin: 20px auto !important; } 
+            .feature-item { border-left: none; padding: 12px 0; border-bottom: 1px solid #333; text-align: center; font-size: 1rem; } 
+            .quote { width: 100%; margin: 20px 0; font-size: 1.1rem; padding: 15px; }
+            .tccc-input { font-size: 16px !important; padding: 15px; }
+            .btn { width: 100%; padding: 18px 20px; font-size: 1rem; }
         }
     </style>
 </head>
@@ -131,7 +86,7 @@
             <div class="launch-date">EXPECTED 2027</div>
             <h2>SAECULUM: BLOOD OF AGES</h2>
             <p>A genre-agnostic toolkit across all ages of human evolution. Whether you are running primitive survival, a desert raid, or space opera, the mechanics adapt while keeping math consistent.</p>
-            <div class="feature-item"><span class="highlight">SCALABLE DICE:</span> No d20s. Scale from d4 to d12 for Attributes and Skills to create a predictable Bell Curve.</div>
+            <div class="feature-item"><span class="highlight">SCALABLE DICE:</span> Scale from d4 to d12 for Attributes and Skills to create a predictable Bell Curve.</div>
             <div class="feature-item"><span class="highlight">INJURY SYSTEM:</span> Track impacts from Stun to Lethal. Damage directly impacts effectiveness.</div>
         </div>
         <img src="bloodofages.jpg" alt="Saeculum Core Cover" class="book-cover">
@@ -154,7 +109,7 @@
             <div class="launch-date" style="background: #4a7c3f; color: #fff;">LIVE NOW</div>
             <img src="tccc lite logo.png" alt="TCCC Lite Logo" class="lite-badge">
             <h2 style="color: #6bab5c;">TCCC LITE: THE BLACKJACK SYSTEM</h2>
-            <p>An over-simplified version of the TCCC system using blackjack resolution for fast, almost zero-prep Western scenarios. Perfect for filler sessions or late arrivals.</p>
+            <p>An over-simplified version of the TCCC system using blackjack resolution for fast, almost zero-prep Western scenarios.</p>
             <a href="https://www.drivethrurpg.com/en/publisher/33737/martin-lampron" target="_blank" class="btn" style="background: #4a7c3f; color: #fff;">Visit DriveThruRPG</a>
         </div>
         <img src="saloon.jpg" alt="TCCC Lite Blackjack Cover" class="book-cover">
@@ -171,7 +126,7 @@
             </div>
             <textarea name="message" placeholder="[SITUATION REPORT / MESSAGE BODY]" rows="5" required class="tccc-input" style="resize: vertical;"></textarea>
             
-            <button type="submit" class="btn" style="width: 100%; letter-spacing: 2px;">SEND SIGNAL</button>
+            <button type="submit" class="btn" style="width: 100%; cursor: pointer; letter-spacing: 2px;">SEND SIGNAL</button>
         </form>
 
         <hr style="border: 0; border-top: 1px solid #333; margin: 40px 0;">
