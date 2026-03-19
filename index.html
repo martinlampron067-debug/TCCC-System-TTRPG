@@ -42,7 +42,7 @@
         .feature-item { margin-bottom: 15px; display: block; border-left: 2px solid #b8962e; padding-left: 15px; font-size: 0.95rem; }
         .quote { font-style: italic; color: #b8962e; background: #1a1a1a; padding: 25px; border-radius: 4px; margin: 20px 0; border: 1px dashed #444; text-align: center; width: 100%; font-size: 1.1rem; }
         .launch-date { display: inline-block; background: #b8962e; color: #000; padding: 4px 12px; font-weight: bold; border-radius: 2px; font-size: 0.85rem; margin-bottom: 15px; text-transform: uppercase; }
-        .btn { display: inline-block; padding: 14px 30px; background: #b8962e; color: #000; text-decoration: none; font-weight: bold; border-radius: 2px; transition: 0.3s; margin-top: 20px; text-transform: uppercase; border: none; text-align: center; }
+        .btn { display: inline-block; padding: 14px 30px; background: #b8962e; color: #000; text-decoration: none; font-weight: bold; border-radius: 2px; transition: 0.3s; margin-top: 20px; text-transform: uppercase; border: none; text-align: center; cursor: pointer; }
         .btn:hover { background: #fff; color: #000; }
         .btn-discord { background: #5865F2; color: #fff; }
         .btn-discord:hover { background: #4752c4; color: #fff; }
@@ -50,11 +50,24 @@
         .social-grid { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 10px; }
         footer { text-align: center; padding: 60px; font-size: 0.85rem; color: #555; border-top: 1px solid #222; letter-spacing: 1px; }
 
+        /* CONTACT FORM STYLING */
+        .tccc-input { 
+            width: 100%; 
+            background: #000; 
+            border: 1px solid #333; 
+            color: #b8962e; 
+            padding: 12px; 
+            font-family: 'Courier New', monospace; 
+            margin-bottom: 10px;
+            outline: none;
+        }
+        .tccc-input:focus { border-color: #b8962e; }
+
         /* FINAL MOBILE STABILIZATION */
         @media (max-width: 768px) { 
             .container { padding: 10px; }
             .section { 
-                display: block; /* Forces stack to prevent horizontal 'leaning' */
+                display: block; 
                 padding: 20px; 
                 width: 100%; 
                 margin-left: 0;
@@ -68,7 +81,7 @@
             .book-cover { 
                 width: 100%; 
                 max-width: 260px; 
-                margin: 20px auto !important; /* Forces centering of the image */
+                margin: 20px auto !important; 
             } 
             .feature-item { 
                 border-left: none; 
@@ -129,8 +142,22 @@
     </div>
 
     <div class="contact-section">
-        <h2 style="margin-top:0;">JOIN THE OPERATION</h2>
-        <p>Get the latest tactical briefings, dev logs, and community playtests.</p>
+        <h2 style="margin-top:0;">FIELD REPORT</h2>
+        <p>Send a direct transmission to Command. Return coordinates required for reply.</p>
+        
+        <form action="https://formspree.io/f/mreyrnpl" method="POST" style="max-width: 600px; margin: 25px auto; text-align: left;">
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <input type="text" name="name" placeholder="[OPERATIVE NAME]" required class="tccc-input" style="flex: 1;">
+                <input type="email" name="email" placeholder="[RETURN EMAIL]" required class="tccc-input" style="flex: 1;">
+            </div>
+            <textarea name="message" placeholder="[SITUATION REPORT / MESSAGE BODY]" rows="5" required class="tccc-input" style="resize: vertical;"></textarea>
+            
+            <button type="submit" class="btn" style="width: 100%; letter-spacing: 2px;">SEND SIGNAL</button>
+        </form>
+
+        <hr style="border: 0; border-top: 1px solid #333; margin: 40px 0;">
+
+        <p>JOIN THE OPERATION</p>
         <div class="social-grid">
             <a href="https://www.facebook.com/SaeculumBloodOfAges?locale=fr_CA" target="_blank" class="btn">Facebook</a>
             <a href="https://discord.gg/3a33jT5Q6F" target="_blank" class="btn btn-discord">Discord</a>
