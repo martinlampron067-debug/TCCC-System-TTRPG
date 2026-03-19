@@ -26,7 +26,7 @@
     <meta property="twitter:description" content="Veteran-designed tactical RPG engine. Scalable dice, realistic injury system, and genre-agnostic play.">
 
     <style>
-        * { box-sizing: border-box; } /* Prevents borders from pushing layout off-center */
+        * { box-sizing: border-box; } 
         body { background-color: #0a0a0a; color: #e0e0e0; font-family: 'Courier New', Courier, monospace; margin: 0; line-height: 1.6; overflow-x: hidden; }
         header { padding: 60px 20px; text-align: center; border-bottom: 3px solid #b8962e; background: linear-gradient(to bottom, #1a1a1a, #0a0a0a); }
         h1 { color: #b8962e; margin: 0; letter-spacing: 5px; font-size: 2.5rem; text-transform: uppercase; }
@@ -50,14 +50,37 @@
         .social-grid { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 10px; }
         footer { text-align: center; padding: 60px; font-size: 0.85rem; color: #555; border-top: 1px solid #222; letter-spacing: 1px; }
 
-        /* REINFORCED MOBILE CENTERING */
+        /* FINAL MOBILE STABILIZATION */
         @media (max-width: 768px) { 
-            .container { padding: 20px 10px; }
-            .section { flex-direction: column; align-items: center !important; text-align: center; padding: 20px; width: 100%; } 
-            .content-block { width: 100%; min-width: 100%; margin-bottom: 20px; flex: none; }
-            .book-cover { width: 100%; max-width: 280px; margin: 20px auto !important; } 
-            .feature-item { border-left: none; padding-left: 0; text-align: center; border-bottom: 1px solid #333; padding-bottom: 10px; } 
-            .quote { width: 100%; margin: 20px 0; }
+            .container { padding: 10px; }
+            .section { 
+                display: block; /* Forces stack to prevent horizontal 'leaning' */
+                padding: 20px; 
+                width: 100%; 
+                margin-left: 0;
+                margin-right: 0;
+            } 
+            .content-block { 
+                width: 100%; 
+                text-align: center; 
+                margin-bottom: 20px; 
+            }
+            .book-cover { 
+                width: 100%; 
+                max-width: 260px; 
+                margin: 20px auto !important; /* Forces centering of the image */
+            } 
+            .feature-item { 
+                border-left: none; 
+                padding: 10px 0; 
+                border-bottom: 1px solid #333; 
+                text-align: center;
+            } 
+            .quote { 
+                width: 100%; 
+                margin: 20px 0; 
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
