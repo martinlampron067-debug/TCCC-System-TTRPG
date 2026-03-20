@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+      (function() {
+        var url = new URL(window.location.href);
+        if (url.searchParams.has('fbclid')) {
+          url.searchParams.delete('fbclid');
+          var cleanUrl = url.pathname + url.search + url.hash;
+          window.history.replaceState({}, document.title, cleanUrl);
+        }
+      })();
+    </script>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3HL00VZD9"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -35,6 +46,8 @@
         .btn { display: inline-block; padding: 14px 30px; background: #b8962e; color: #000; text-decoration: none; font-weight: bold; border-radius: 2px; transition: 0.3s; margin-top: 20px; text-transform: uppercase; border: none; text-align: center; cursor: pointer; }
         .btn:hover { background: #fff; color: #000; }
         .tccc-input { width: 100%; background: #000; border: 1px solid #333; color: #b8962e; padding: 12px; font-family: 'Courier New', monospace; margin-bottom: 10px; outline: none; border-radius: 2px; }
+        .contact-section { text-align: center; margin-top: 40px; padding: 40px 20px; border-top: 1px solid #333; }
+        footer { text-align: center; padding: 40px 20px; font-size: 0.8rem; color: #555; border-top: 1px solid #1a1a1a; }
 
         @media (max-width: 768px) { 
             body { font-size: 18px; } 
@@ -83,19 +96,16 @@
         <div class="content-block">
             <div class="launch-date" style="background: #8b0000; color: #fff;">EXPECTED 2027</div>
             <h2 style="color: #ff4d4d; border-bottom-color: #8b0000;">SAECULUM: CHRONICLE OF BLOOD</h2>
-            <p>A visceral novelization of the TCCC System in action. This collection features some of the harrows of emergent gameplay outcomes generated during official sessions. Witness how the cold logic of the TCCC engine translates into a multiverse of grit, sacrifice, and tactical desperation.</p>
+            <p>A visceral novelization of the TCCC System in action. This collection features some of the harrows of emergent gameplay outcomes generated during official sessions.</p>
             
             <div class="feature-item" style="border-left-color: #8b0000;">
                 <span class="highlight" style="color: #ff4d4d;">SELECTED INTEL:</span>
             </div>
             <div class="feature-item" style="border-left-color: #8b0000; margin-left: 20px;">
-                <span class="highlight" style="color: #ff4d4d;">LEO LA CICATRICE:</span> A veteran's choice between his own vanity and the survival of his men.
+                <span class="highlight" style="color: #ff4d4d;">LEO LA CICATRICE:</span> A veteran's choice between vanity and survival.
             </div>
             <div class="feature-item" style="border-left-color: #8b0000; margin-left: 20px;">
-                <span class="highlight" style="color: #ff4d4d;">THE WHITE HUNGER:</span> A descent into supernatural starvation and madness in the frozen Saguenay backwoods.
-            </div>
-            <div class="feature-item" style="border-left-color: #8b0000; margin-left: 20px;">
-                <span class="highlight" style="color: #ff4d4d;">DOING THE MATH:</span> A specialized mech fire team must "do the math" of survival against biological threats on a distant mineral world.
+                <span class="highlight" style="color: #ff4d4d;">THE WHITE HUNGER:</span> A descent into madness in the frozen Saguenay backwoods.
             </div>
 
             <div class="feature-item" style="border-left-color: #8b0000; margin-top: 20px;">
@@ -107,11 +117,12 @@
             <p style="text-align: center; padding: 20px; font-weight: bold;">COVER ART PENDING<br>[REDACTED]</p>
         </div>
     </div>
+
     <div class="section" style="border-color: #4a7c3f;">
         <div class="content-block">
             <div class="launch-date" style="background: #4a7c3f; color: #fff;">LIVE NOW</div>
             <h2 style="color: #6bab5c; border-bottom-color: #4a7c3f;">TCCC LITE SYSTEM</h2>
-            <p>An oversimplified, fast-paced adaptation of the TCCC System. Designed as a "fast-filler" for high-stakes play without the manual-heavy prep.</p>
+            <p>An oversimplified, fast-paced adaptation of the TCCC System.</p>
             
             <div class="feature-item" style="border-left-color: #4a7c3f;">
                 <span class="highlight" style="color: #6bab5c;">SYSTEM INTEL:</span> 
@@ -121,9 +132,7 @@
             <hr style="border: 0; border-top: 1px solid #333; margin: 20px 0;">
             
             <h3 style="color: #6bab5c; text-transform: uppercase;">Trouble at the Black Jack Saloon</h3>
-            <p>Experience the grit of the Old West where every shot counts and every wound changes the way you play. This module uses unique blackjack-style resolution for fast, tactical choices.</p>
-            
-            <div class="feature-item" style="border-left-color: #4a7c3f;"><span class="highlight" style="color: #6bab5c;">NO HP BLOAT:</span> Every injury matters.</div>
+            <p>Experience the grit of the Old West. This module uses unique blackjack-style resolution.</p>
             
             <a href="https://www.drivethrurpg.com/en/publisher/33737/martin-lampron" target="_blank" class="btn" style="background: #4a7c3f; color: #fff;">Visit DriveThruRPG Store</a>
         </div>
@@ -137,20 +146,7 @@
         <div class="content-block">
             <div class="launch-date" style="background: #b8962e; color: #000;">LIVE NOW</div>
             <h2 style="color: #b8962e; border-bottom-color: #b8962e;">THE HUNT FOR "SMALL" WHESTERFIELD</h2>
-            <p>The first major expansion for <i>Trouble at the Black Jack Saloon</i>. This bilingual (EN/FR) mini-campaign takes your posse on a relentless pursuit across the frontier of 1871. From political riots in New Mexico to the frozen peaks of Montana, track the diminutive but deadly Aloysius Whesterfield before winter seals the mountain passes.</p>
-            
-            <div class="feature-item" style="border-left-color: #b8962e;">
-                <span class="highlight">BILINGUAL ADVENTURE:</span> Fully playable in both English and French.
-            </div>
-            <div class="feature-item" style="border-left-color: #b8962e;">
-                <span class="highlight">DYNAMIC CAMPAIGN:</span> Includes 5 high-stakes sessions featuring cattle stampedes, silver mine labyrinths, and train ambushes.
-            </div>
-            <div class="feature-item" style="border-left-color: #b8962e;">
-                <span class="highlight">HISTORICAL DEPTH:</span> Face real-world events of 1871, including the Great Chicago Fire and the rise of the Pinkertons.
-            </div>
-
-            <p style="font-size: 0.85rem; color: #888; margin-top: 15px;"><i>*Mini-campaign expansion. Requires Trouble at the Black Jack Saloon base game.</i></p>
-
+            <p>The first major expansion for <i>Trouble at the Black Jack Saloon</i>. Bilingual (EN/FR) mini-campaign.</p>
             <a href="https://www.drivethrurpg.com/en/publisher/33737/martin-lampron" target="_blank" class="btn">Acquire Expansion</a>
         </div>
         
