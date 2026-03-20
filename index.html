@@ -34,7 +34,7 @@
         .content-block { flex: 1; min-width: 300px; }
         .book-cover { width: 250px; height: auto; border: 1px solid #444; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.7); transition: 0.3s; display: block; }
         .lite-badge { width: 160px; height: auto; margin-bottom: 15px; display: block; }
-        .book-cover:hover { border-color: #b8962e; transform: scale(1.02); }
+        .book-cover:hover { border-color: #b8962e; transform: scale(1.05); cursor: pointer; }
         h2 { color: #b8962e; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 10px; margin-top: 0; }
         .highlight { color: #b8962e; font-weight: bold; }
         .feature-item { margin-bottom: 15px; display: block; border-left: 2px solid #b8962e; padding-left: 15px; font-size: 0.95rem; }
@@ -48,14 +48,12 @@
         .social-grid { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 10px; }
         footer { text-align: center; padding: 60px; font-size: 0.85rem; color: #555; border-top: 1px solid #222; letter-spacing: 1px; }
 
-        /* CONTACT FORM STYLING */
         .tccc-input { 
             width: 100%; background: #000; border: 1px solid #333; color: #b8962e; padding: 12px; 
             font-family: 'Courier New', monospace; margin-bottom: 10px; outline: none; border-radius: 2px;
         }
         .tccc-input:focus { border-color: #b8962e; }
 
-        /* FINAL MOBILE STABILIZATION & SCALING */
         @media (max-width: 768px) { 
             body { font-size: 18px; } 
             header { padding: 40px 10px; }
@@ -85,11 +83,13 @@
         <div class="content-block">
             <div class="launch-date">EXPECTED 2027</div>
             <h2>SAECULUM: BLOOD OF AGES</h2>
-            <p>A genre-agnostic toolkit across all ages of human evolution. Whether you are running primitive survival, a desert raid, or space opera, the mechanics adapt while keeping math consistent.</p>
-            <div class="feature-item"><span class="highlight">SCALABLE DICE:</span> Scale from d4 to d12 for Attributes and Skills to create a predictable Bell Curve.</div>
-            <div class="feature-item"><span class="highlight">INJURY SYSTEM:</span> Track impacts from Stun to Lethal. Damage directly impacts effectiveness.</div>
+            <p>A genre-agnostic toolkit across all ages of human evolution. From primitive survival to space opera, the TCCC engine scales with your story.</p>
+            <div class="feature-item"><span class="highlight">MODULAR DESIGN:</span> Consistent math for any era.</div>
+            <div class="feature-item"><span class="highlight">SYSTEM INTEL:</span> <a href="saeculum-details.html" style="color:#b8962e;">Click the cover for full mechanical breakdown.</a></div>
         </div>
-        <img src="bloodofages.jpg" alt="Saeculum Core Cover" class="book-cover">
+        <a href="saeculum-details.html">
+            <img src="bloodofages.jpg" alt="Saeculum Core Cover" class="book-cover">
+        </a>
     </div>
 
     <div class="section" style="border-color: #00f2ff44;">
@@ -97,8 +97,8 @@
             <div class="launch-date" style="background:#00f2ff; color:#000;">EXPECTED 2027</div>
             <h2 style="color: #00f2ff; border-bottom-color: #00f2ff;">SAECULUM: CARNEFERREUS</h2>
             <p>The expansion for the Saeculum engine. High-consequence survival in a fractured post-apocalyptic / cyberpunk North America.</p>
-            <div class="feature-item"><span class="highlight" style="color: #00f2ff;">DATA HUSTLE:</span> Gritty "Cracking" mechanics where digital sabotage happens in meat-space.</div>
-            <div class="feature-item"><span class="highlight" style="color: #00f2ff;">CHROME SICKNESS:</span> Manage the biological cost of high-tier augmentations and Pain Editors.</div>
+            <div class="feature-item"><span class="highlight" style="color: #00f2ff;">DATA HUSTLE:</span> Gritty "Cracking" mechanics.</div>
+            <div class="feature-item"><span class="highlight" style="color: #00f2ff;">CHROME SICKNESS:</span> Manage the biological cost of augmentations.</div>
         </div>
         <img src="carneferraus.jpg" alt="Carneferreus Expansion Cover" class="book-cover">
         <div class="quote">"Audacity is how you get scrapped, audacity with a good plan is how legends are born."</div>
