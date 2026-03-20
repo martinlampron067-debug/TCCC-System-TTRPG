@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCCC Lite | System Specs</title>
+    <style>
+        body { background-color: #0a0a0a; color: #d4e0d4; font-family: 'Courier New', monospace; margin: 0; line-height: 1.6; }
+        header { padding: 40px; text-align: center; border-bottom: 3px solid #4a7c3f; background: linear-gradient(to bottom, #1a241a, #0a0a0a); }
+        h1, h2, h3 { color: #6bab5c; text-transform: uppercase; letter-spacing: 2px; }
+        .container { max-width: 900px; margin: auto; padding: 40px 20px; }
+        .back-link { color: #6bab5c; text-decoration: none; font-weight: bold; display: inline-block; margin-bottom: 20px; border: 1px solid #4a7c3f; padding: 5px 15px; }
+        .back-link:hover { background: #4a7c3f; color: #fff; }
+        .tech-box { border: 1px solid #2a3a2a; padding: 20px; background: #111; border-left: 4px solid #4a7c3f; margin-bottom: 30px; }
+        .highlight { color: #6bab5c; font-weight: bold; }
+        footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #444; }
+        ul { padding-left: 20px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>TCCC LITE PROTOCOLS</h1>
+    <div style="color: #6bab5caa;">FAST-FILLER | HIGH STAKES | TACTICAL CHOICE</div>
+</header>
+
+<div class="container">
+    <a href="index.html" class="back-link"> < RETURN TO TERMINAL</a>
+
+    <section>
+        <h2>The Lite Philosophy</h2>
+        <p>TCCC Lite is a streamlined adaptation of the parent engine found in <em>Saeculum</em>. It is designed to be a "fast-filler"—perfect for one-shots or sessions where you want tactical depth without the weight of a 300-page manual.</p>
+        
+        <div class="tech-box">
+            <h3>Blackjack Resolution</h3>
+            <p>Unlike standard d20 systems, the Lite engine often utilizes a "push your luck" style resolution. This creates immediate tension: do you play it safe or risk a "bust" for a critical cinematic success?</p>
+        </div>
+    </section>
+
+    <section style="margin-top: 50px;">
+        <h2>Trouble at the Black Jack Saloon</h2>
+        <p>The premier module for the TCCC Lite system, transporting players to the unforgiving grit of the Old West.</p>
+        
+        <div class="tech-box">
+            <h3>No "HP Bloat"</h3>
+            <p>In this system, you don't have a massive pool of health. Every shot counts. Wounds are tracked specifically, and a single well-placed bullet can permanently alter your character's effectiveness for the rest of the encounter.</p>
+        </div>
+
+        <div class="tech-box">
+            <h3>Veteran-Informed Mechanics</h3>
+            <p>Drawing from the author's 18 years of service in the Canadian Armed Forces, the combat mechanics focus on <span class="highlight">Tactical Leverage</span>. Positioning, cover, and the weight of your choices matter more than just the numbers on your sheet.</p>
+        </div>
+    </section>
+
+    <section style="margin-top: 50px;">
+        <h2>Key Features</h2>
+        <ul>
+            <li><span class="highlight">Bilingual Support:</span> Fully playable in both English and Français.</li>
+            <li><span class="highlight">Zero-Prep:</span> Designed to get you from character creation to the first shootout in minutes.</li>
+            <li><span class="highlight">Cinematic Lethality:</span> Encourages creative solutions to avoid the deadly consequences of direct conflict.</li>
+        </ul>
+    </section>
+</div>
+
+<footer>
+    &copy; 2026 TCCC SYSTEM | SALOON DOORS SECURED
+</footer>
+
+</body>
+</html>
