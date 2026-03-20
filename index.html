@@ -17,6 +17,12 @@
     <meta name="description" content="A realistic RPG toolkit by Martin Lampron. Featuring scalable d4-d12 resolution and injury-based combat.">
     <meta name="author" content="Martin Lampron">
 
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://martinlampron067-debug.github.io/TCCC-System-TTRPG/">
+    <meta property="og:title" content="TCCC System | Realistic RPG Toolkit">
+    <meta property="og:description" content="No d20s. No Hit Points. Just tactical precision. Experience the TCCC System and the Saeculum engine.">
+    <meta property="og:image" content="https://martinlampron067-debug.github.io/TCCC-System-TTRPG/mini.jpg">
+
     <style>
         * { box-sizing: border-box; } 
         body { background-color: #0a0a0a; color: #e0e0e0; font-family: 'Courier New', Courier, monospace; margin: 0; line-height: 1.6; overflow-x: hidden; }
@@ -27,20 +33,39 @@
         .section { margin-bottom: 50px; padding: 30px; border: 1px solid #333; border-radius: 4px; background: #111; display: flex; flex-wrap: wrap; gap: 30px; align-items: flex-start; justify-content: center; }
         .content-block { flex: 1; min-width: 300px; }
         .book-cover { width: 250px; height: auto; border: 1px solid #444; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.7); transition: 0.3s; display: block; }
-        .book-cover:hover { border-color: #b8962e; transform: scale(1.05); cursor: pointer; }
+        .lite-badge { width: 160px; height: auto; margin-bottom: 15px; display: block; }
+        .book-cover:hover { border-color: #b8962e; transform: scale(1.02); cursor: pointer; }
         h2 { color: #b8962e; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 10px; margin-top: 0; }
         .highlight { color: #b8962e; font-weight: bold; }
         .feature-item { margin-bottom: 15px; display: block; border-left: 2px solid #b8962e; padding-left: 15px; font-size: 0.95rem; }
+        .quote { font-style: italic; color: #b8962e; background: #1a1a1a; padding: 25px; border-radius: 4px; margin: 20px 0; border: 1px dashed #444; text-align: center; width: 100%; font-size: 1.1rem; }
         .launch-date { display: inline-block; background: #b8962e; color: #000; padding: 4px 12px; font-weight: bold; border-radius: 2px; font-size: 0.85rem; margin-bottom: 15px; text-transform: uppercase; }
         .btn { display: inline-block; padding: 14px 30px; background: #b8962e; color: #000; text-decoration: none; font-weight: bold; border-radius: 2px; transition: 0.3s; margin-top: 20px; text-transform: uppercase; border: none; text-align: center; cursor: pointer; }
         .btn:hover { background: #fff; color: #000; }
+        .btn-discord { background: #5865F2; color: #fff; }
+        .btn-discord:hover { background: #4752c4; color: #fff; }
         .contact-section { text-align: center; padding: 40px; border: 1px solid #b8962e; border-radius: 4px; background: #1a1a1a; margin-top: 20px; }
+        .social-grid { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 10px; }
         footer { text-align: center; padding: 60px; font-size: 0.85rem; color: #555; border-top: 1px solid #222; letter-spacing: 1px; }
 
+        .tccc-input { 
+            width: 100%; background: #000; border: 1px solid #333; color: #b8962e; padding: 12px; 
+            font-family: 'Courier New', monospace; margin-bottom: 10px; outline: none; border-radius: 2px;
+        }
+        .tccc-input:focus { border-color: #b8962e; }
+
         @media (max-width: 768px) { 
-            h1 { font-size: 1.8rem; }
-            .section { display: block; padding: 20px; }
-            .book-cover { width: 100%; max-width: 260px; margin: 20px auto !important; }
+            body { font-size: 18px; } 
+            header { padding: 40px 10px; }
+            h1 { font-size: 1.8rem; letter-spacing: 3px; }
+            .container { padding: 10px; }
+            .section { display: block; padding: 20px; width: 100%; } 
+            .content-block { width: 100%; text-align: center; margin-bottom: 20px; }
+            .book-cover { width: 100%; max-width: 260px; margin: 20px auto !important; } 
+            .feature-item { border-left: none; padding: 12px 0; border-bottom: 1px solid #333; text-align: center; font-size: 1rem; } 
+            .quote { width: 100%; margin: 20px 0; font-size: 1.1rem; padding: 15px; }
+            .tccc-input { font-size: 16px !important; padding: 15px; }
+            .btn { width: 100%; padding: 18px 20px; font-size: 1rem; }
         }
     </style>
 </head>
@@ -58,9 +83,9 @@
         <div class="content-block">
             <div class="launch-date">EXPECTED 2027</div>
             <h2>SAECULUM: BLOOD OF AGES</h2>
-            <p>A genre-agnostic toolkit across all ages of human evolution. From primitive survival to space opera, the TCCC engine scales with your story.</p>
-            <div class="feature-item"><span class="highlight">MODULAR DESIGN:</span> Consistent math for any era.</div>
-            <div class="feature-item"><span class="highlight">SYSTEM INTEL:</span> <a href="saeculum-details.html" style="color:#b8962e;">Click the cover for the full mechanical breakdown.</a></div>
+            <p>A genre-agnostic toolkit across all ages of human evolution. Whether you are running primitive survival, a desert raid, or space opera, the mechanics adapt while keeping math consistent.</p>
+            <div class="feature-item"><span class="highlight">SCALABLE DICE:</span> Rank 1 (d4) to Rank 5 (d12) resolution.</div>
+            <div class="feature-item"><span class="highlight">SYSTEM INTEL:</span> <a href="saeculum-details.html" style="color: #b8962e; text-decoration: none; border-bottom: 1px solid;">Click cover for mechanical intel.</a></div>
         </div>
         <a href="saeculum-details.html">
             <img src="bloodofages.jpg" alt="Saeculum Core Cover" class="book-cover">
@@ -71,18 +96,20 @@
         <div class="content-block">
             <div class="launch-date" style="background:#00f2ff; color:#000;">EXPECTED 2027</div>
             <h2 style="color: #00f2ff; border-bottom-color: #00f2ff;">SAECULUM: CARNEFERREUS</h2>
-            <p>The high-tech evolution of the Saeculum engine. Survive the fractured landscapes of a cyberpunk North America where your humanity is the ultimate currency.</p>
-            <div class="feature-item"><span class="highlight" style="color: #00f2ff;">DATA HUSTLE:</span> Gritty "Cracking" mechanics.</div>
-            <div class="feature-item"><span class="highlight" style="color: #00f2ff;">NEON INTEL:</span> <a href="carneferreus-details.html" style="color:#00f2ff;">Click cover to decode expansion specs.</a></div>
+            <p>The expansion for the Saeculum engine. High-consequence survival in a fractured post-apocalyptic / cyberpunk North America.</p>
+            <div class="feature-item"><span class="highlight" style="color: #00f2ff;">DATA HUSTLE:</span> Gritty "Cracking" mechanics in meat-space.</div>
+            <div class="feature-item"><span class="highlight" style="color: #00f2ff;">NEON INTEL:</span> <a href="carneferreus-details.html" style="color: #00f2ff; text-decoration: none; border-bottom: 1px solid;">Click cover to decode expansion specs.</a></div>
         </div>
         <a href="carneferreus-details.html">
             <img src="carneferraus.jpg" alt="Carneferreus Expansion Cover" class="book-cover">
         </a>
+        <div class="quote">"Audacity is how you get scrapped, audacity with a good plan is how legends are born."</div>
     </div>
 
     <div class="section" style="border-color: #4a7c3f;">
         <div class="content-block">
             <div class="launch-date" style="background: #4a7c3f; color: #fff;">LIVE NOW</div>
+            <img src="tccc lite logo.png" alt="TCCC Lite Logo" class="lite-badge">
             <h2 style="color: #6bab5c;">TCCC LITE: THE BLACKJACK SYSTEM</h2>
             <p>An over-simplified version of the TCCC system using blackjack resolution for fast, almost zero-prep Western scenarios.</p>
             <a href="https://www.drivethrurpg.com/en/publisher/33737/martin-lampron" target="_blank" class="btn" style="background: #4a7c3f; color: #fff;">Visit DriveThruRPG</a>
@@ -91,9 +118,23 @@
     </div>
 
     <div class="contact-section">
-        <h2>FIELD REPORT</h2>
-        <p>Send a direct transmission to Command.</p>
-        <a href="https://discord.gg/3a33jT5Q6F" target="_blank" class="btn" style="background: #5865F2; color: #fff;">Join the Discord</a>
+        <h2 style="margin-top:0;">FIELD REPORT</h2>
+        <form action="https://formspree.io/f/mreyrnpl" method="POST" style="max-width: 600px; margin: 25px auto; text-align: left;">
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <input type="text" name="name" placeholder="[OPERATIVE NAME]" required class="tccc-input" style="flex: 1;">
+                <input type="email" name="email" placeholder="[RETURN EMAIL]" required class="tccc-input" style="flex: 1;">
+            </div>
+            <textarea name="message" placeholder="[SITUATION REPORT / MESSAGE BODY]" rows="5" required class="tccc-input" style="resize: vertical;"></textarea>
+            <button type="submit" class="btn" style="width: 100%; cursor: pointer; letter-spacing: 2px;">SEND SIGNAL</button>
+        </form>
+
+        <hr style="border: 0; border-top: 1px solid #333; margin: 40px 0;">
+
+        <p>JOIN THE OPERATION</p>
+        <div class="social-grid">
+            <a href="https://www.facebook.com/SaeculumBloodOfAges?locale=fr_CA" target="_blank" class="btn">Facebook</a>
+            <a href="https://discord.gg/3a33jT5Q6F" target="_blank" class="btn btn-discord">Discord</a>
+        </div>
     </div>
 
 </div>
