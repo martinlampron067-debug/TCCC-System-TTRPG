@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronicle of Blood | The White Hunger Extract</title>
+    <style>
+        body { background-color: #050505; color: #d0d0d0; font-family: 'Courier New', Courier, monospace; margin: 0; line-height: 1.8; }
+        .nav-back { padding: 20px; border-bottom: 1px solid #333; }
+        .nav-back a { color: #ff4d4d; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
+        .nav-back a:hover { color: #fff; }
+        .story-container { max-width: 800px; margin: 50px auto; padding: 40px; background: #0a0a0a; border: 1px solid #1a0000; box-shadow: 0 0 50px rgba(139, 0, 0, 0.1); }
+        h1 { color: #ff4d4d; text-transform: uppercase; letter-spacing: 4px; border-bottom: 2px solid #8b0000; padding-bottom: 10px; }
+        .metadata { color: #888; font-size: 0.85rem; margin-bottom: 30px; text-transform: uppercase; }
+        .extract-text { white-space: pre-line; font-size: 1.05rem; }
+        .system-note { margin-top: 40px; padding: 20px; border-top: 1px solid #333; font-style: italic; color: #666; font-size: 0.9rem; }
+        .highlight { color: #ff4d4d; font-weight: bold; }
+        footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #444; border-top: 1px solid #111; }
+        
+        /* Atmospheric Frost Effect */
+        .story-container::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle, transparent 60%, rgba(255,255,255,0.02) 100%);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav-back">
+    <a href="index.html">← Return to Tactical Hub</a>
+</div>
+
+<div class="story-container">
+    <div class="metadata">Subject: The White Hunger | Location: Saguenay Region | Era: 19th Century</div>
+    <h1>The White Hunger</h1>
+
+    <div class="extract-text">
+        The wind didn’t just blow in the Saguenay region backwoods; it screamed[cite: 2168]. 
+
+        Odilon Thorne spat a dark stream of tobacco into the snow, watching it freeze before it even sank[cite: 2169]. Beside him, his partner, Kaelig, was tightening the cinches on their last pack horse[cite: 2170]. Bound in rusted chains in the sled behind them sat Clement Tremblay—the man worth one hundred dollars in Chicoutimi[cite: 2172].
+
+        "The spirits of the air are turning sharp," the village Elder warned them. "If you go now, you fight the Witiko"[cite: 2175, 2176].
+
+        By the third day, the world turned white[cite: 2181]. The horses’ ribs began to show, and the silence of the northern woods was a waiting one[cite: 2181]. On the seventh day, the last horse collapsed, and they had no choice but to slaughter it[cite: 2187, 2188]. As they ate, the atmosphere shifted. The temperature plummeted until the trees began to crack like pistol shots[cite: 2189].
+
+        Odilon looked at Kaelig. His partner’s eyes were bloodshot, staring at the horse meat with a terrifying, ravenous intensity[cite: 2190]. "There's not enough," Kaelig whispered[cite: 2191].
+
+        A blur of impossible darkness tore through the camp[cite: 2200]. As it passed, a spindly, translucent hand brushed against the prisoner’s cheek[cite: 2206]. Tremblay didn't scream. He gasped, his back arching, and a line of black frost began to spread where the shadow had touched his skin[cite: 2207, 2217]. 
+
+        The trees began to groan his name: “Clé-ment... Clé-ment Trem-blay...”[cite: 2213, 2214].
+
+        Days later, Kaelig’s madness broke. He lunged at Tremblay, sinkings his teeth into the prisoner’s cheek[cite: 2232, 2255]. A guttural scream tore from Kaelig’s throat as Tremblay tore a jagged piece of flesh away[cite: 2256]. The blood wasn't red—it was oily black ichor[cite: 2258].
+
+        Odilon stood alone in the dark after the final shots were fired[cite: 2310]. He was alone, without food, dragging two dead men through a winter that had only just begun[cite: 2314].
+
+        By the time the church spires of Chicoutimi pierced the horizon, Odilon was a skeletal remains of a man[cite: 2320]. He walked into the police office like a man stepping out of a tomb[cite: 2322]. 
+
+        "Take your money, man," the Sheriff whispered, wincing at Odilon’s touch. "You look like you're starving"[cite: 2328, 2329, 2332].
+
+        Odilon’s eyes, once brown, were now a piercing, translucent blue—the color of a glacier[cite: 2326]. 
+
+        "The money is cold," Odilon whispered. "I’m hungry"[cite: 2331, 2333].
+    </div>
+
+    <div class="system-note">
+        <span class="highlight">SYSTEM INTEL:</span> This narrative highlights the <span class="highlight">Hunger & Exposure</span> mechanics of the TCCC system. The transformation of Kaelig and Odilon represents a failed <span class="highlight">Willpower</span> check against environmental corruption, leading to a permanent shift in character Attributes.
+    </div>
+</div>
+
+<footer>
+    &copy; 2026 TCCC SYSTEM | EXTRACT FROM CHRONICLE OF BLOOD
+</footer>
+
+</body>
+</html>
