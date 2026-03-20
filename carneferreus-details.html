@@ -3,78 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carneferreus | Cybernetic Intel</title>
+    <title>TCCC System | Saeculum: Carneferreus Specs</title>
     <style>
-        body { background-color: #050505; color: #d1f7ff; font-family: 'Courier New', monospace; margin: 0; line-height: 1.6; }
-        header { padding: 40px; text-align: center; border-bottom: 3px solid #00f2ff; background: linear-gradient(to bottom, #001a1a, #050505); }
-        h1, h2, h3 { color: #00f2ff; text-transform: uppercase; letter-spacing: 3px; text-shadow: 0 0 10px #00f2ff66; }
+        body { background-color: #050505; color: #e0e0e0; font-family: 'Courier New', Courier, monospace; margin: 0; line-height: 1.6; }
+        .nav-back { padding: 20px; border-bottom: 1px solid #00f2ff44; }
+        .nav-back a { color: #00f2ff; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
+        .nav-back a:hover { color: #fff; }
         .container { max-width: 900px; margin: auto; padding: 40px 20px; }
-        .back-link { color: #00f2ff; text-decoration: none; font-weight: bold; display: inline-block; margin-bottom: 20px; border: 1px solid #00f2ff; padding: 5px 15px; transition: 0.3s; }
-        .back-link:hover { background: #00f2ff; color: #000; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px; }
-        .tech-box { border: 1px solid #00f2ff33; padding: 20px; background: #0a0a0a; border-left: 4px solid #00f2ff; height: 100%; box-shadow: inset 0 0 15px #00f2ff11; }
+        header { border-left: 4px solid #00f2ff; padding-left: 20px; margin-bottom: 50px; }
+        h1 { color: #00f2ff; text-transform: uppercase; letter-spacing: 5px; margin: 0; }
+        .tagline { color: #888; text-transform: uppercase; font-size: 0.9rem; margin-top: 5px; }
+        .spec-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .spec-card { background: #111; border: 1px solid #333; padding: 25px; border-radius: 4px; }
+        h2 { color: #00f2ff; font-size: 1.2rem; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 10px; margin-top: 0; }
         .highlight { color: #00f2ff; font-weight: bold; }
-        footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #333; }
-        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+        .module-list { list-style: none; padding: 0; }
+        .module-list li { margin-bottom: 12px; padding-left: 20px; position: relative; font-size: 0.95rem; }
+        .module-list li::before { content: ">"; position: absolute; left: 0; color: #00f2ff; }
+        .footer-note { margin-top: 50px; padding: 20px; border-top: 1px solid #333; text-align: center; font-size: 0.8rem; color: #666; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>EXPANSION OVERRIDE</h1>
-    <div style="color: #00f2ffaa;">SAECULUM: CARNEFERREUS | TRANSHUMAN PROTOCOLS</div>
-</header>
-
-<div class="container">
-    <a href="index.html" class="back-link"> < RETURN TO MAIN TERMINAL</a>
-
-    <section>
-        <h2>The Cost of Evolution</h2>
-        <p>Carneferreus pushes the TCCC engine into the future. It introduces mechanics for high-tier augmentations and the digital battlefield, where the biological and the synthetic collide.</p>
-        
-        <div class="grid">
-            <div class="tech-box">
-                <h3>Chrome Sickness</h3>
-                <p>Every implant—from neural links to sub-dermal plating—drains your <span class="highlight">Nature</span> score. When Nature drops, the "Humanity" of the character erodes, leading to detachment or violent derangements.</p>
-            </div>
-
-            <div class="tech-box">
-                <h3>Data Hustle</h3>
-                <p>A specialized "Cracking" subsystem. Digital sabotage isn't a mini-game; it's a high-stakes tactical action that happens in meat-space, requiring Smarts and speed to bypass security while under fire.</p>
-            </div>
-        </div>
-    </section>
-
-    <section style="margin-top: 50px;">
-        <h2>Advanced Tactical Modules</h2>
-        <div class="grid">
-            <div class="tech-box">
-                <h3>Pain Editors</h3>
-                <p>High-end cyberware can suppress the <strong>Injury Malus</strong>. This allows an operative to fight at 100% efficiency even with Severe Injuries, but carries the risk of instant death if the user doesn't track their biological limits.</p>
-            </div>
-            <div class="tech-box">
-                <h3>Ballistic Escalation</h3>
-                <p>Modern armor introduces <strong>Armor Rating (AR)</strong> vs <strong>Penetration (PEN)</strong>. If your PEN isn't high enough, your damage dice escalate to higher, less lethal die types—turning a killshot into a mere bruise.</p>
-            </div>
-        </div>
-    </section>
-
-    <section style="margin-top: 50px;">
-        <h2>Vehicular Dominance</h2>
-        <p>From armored street-crawlers to customizable Mechs. Carneferreus provides rules for:</p>
-        <div class="tech-box">
-            <ul>
-                <li><span class="highlight">High-Speed Pursuits:</span> Abstract positioning and stunt mechanics.</li>
-                <li><span class="highlight">Mech Customization:</span> Build your frame using Bonus Points, balancing Speed, Armor, and specialized Weapon Hardpoints.</li>
-                <li><span class="highlight">Electronic Warfare:</span> Jamming and hacking enemy vehicle subsystems in the middle of a chase.</li>
-            </ul>
-        </div>
-    </section>
+<div class="nav-back">
+    <a href="index.html">← Return to Tactical Hub</a>
 </div>
 
-<footer>
-    &copy; 2026 TCCC SYSTEM | NEURAL FEED ACTIVE
-</footer>
+<div class="container">
+    <header>
+        <div class="launch-date" style="background:#00f2ff; color:#000; display: inline-block; padding: 2px 10px; font-weight: bold; font-size: 0.8rem; margin-bottom: 10px;">EXPANSION INTEL</div>
+        <h1>SAECULUM: CARNEFERREUS</h1>
+        <div class="tagline">High-Consequence Survival | Fractured North America Setting</div>
+    </header>
+
+    <p>Carneferreus expands the Saeculum engine into a world of systemic futility. While the core system handles the operative, this module introduces the <span class="highlight">Machine</span>—detailed custom vehicle construction designed to survive the transition between corporate arcologies and the lethal wastes of the "Outside".</p>
+
+    <div class="spec-grid">
+        <div class="spec-card" style="border-color: #00f2ff66;">
+            <h2>Custom Vehicle Construction</h2>
+            <p>Traditional mechs are replaced by gritty, customized rigs built for survival. [cite: 318]</p>
+            <ul class="module-list">
+                <li><span class="highlight">Engineering:</span> Rules for building and modifying custom vehicles from scavenged parts. [cite: 318]</li>
+                <li><span class="highlight">Navigation:</span> Specialized mechanics for traversing the "Outside" and the Urban Labyrinth. [cite: 318]</li>
+                <li><span class="highlight">Environmental Toll:</span> Managing fuel, repairs, and systemic wear in toxic zones. [cite: 318]</li>
+            </ul>
+        </div>
+
+        <div class="spec-card">
+            <h2>The Grid & Hacking</h2>
+            <p>Engage with the digital shadows of a fractured society. [cite: 318]</p>
+            <ul class="module-list">
+                <li><span class="highlight">Ghost Grid:</span> High-stakes data hustle within the remnants of the old networks. [cite: 318]</li>
+                <li><span class="highlight">Meat-Space Cracking:</span> Physical hacking modules that require tactical presence. [cite: 318]</li>
+                <li><span class="highlight">EMP Management:</span> Surviving and managing EMP storms that threaten all electronics. [cite: 318]</li>
+            </ul>
+        </div>
+
+        <div class="spec-card">
+            <h2>The Dual Economy</h2>
+            <p>Survive in a world where currency is dead but value remains. [cite: 318]</p>
+            <ul class="module-list">
+                <li><span class="highlight">Barter & Trade:</span> Deep systems for resource exchange in the absence of stable credits. [cite: 318]</li>
+                <li><span class="highlight">Investment:</span> Long-term resource management to secure your holdout. [cite: 318]</li>
+                <li><span class="highlight">Systemic Futility:</span> Gameplay influenced by widespread ignorance and corporate gatekeeping. [cite: 318]</li>
+            </ul>
+        </div>
+
+        <div class="spec-card" style="border-color: #00f2ff66;">
+            <h2>The Fractured Blocs</h2>
+            <p>Navigate the dangerous socio-political landscape of 2027. [cite: 318]</p>
+            <ul class="module-list">
+                <li><span class="highlight">Green Arcologies:</span> Corporate mega-farms—islands of luxury in a sea of rot. [cite: 318]</li>
+                <li><span class="highlight">The Holdouts:</span> Remnants of "Good Old America" struggling to maintain autonomy. [cite: 318]</li>
+                <li><span class="highlight">The Void:</span> Areas where neither law nor corporate reach extends. [cite: 318]</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        CORE SYSTEM REQUIREMENTS: SAECULUM: BLOOD OF AGES <br>
+        DESIGNED BY MARTIN LAMPRON | EXPECTED 2027
+    </div>
+</div>
 
 </body>
 </html>
