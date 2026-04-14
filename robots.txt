@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://martinlampron067-debug.github.io/TCCC-System-TTRPG/sitemap.xml
