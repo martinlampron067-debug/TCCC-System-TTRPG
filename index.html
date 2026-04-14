@@ -45,6 +45,14 @@
         .launch-date { display: inline-block; background: #b8962e; color: #000; padding: 4px 12px; font-weight: bold; border-radius: 2px; font-size: 0.85rem; margin-bottom: 15px; text-transform: uppercase; }
         .btn { display: inline-block; padding: 14px 30px; background: #b8962e; color: #000; text-decoration: none; font-weight: bold; border-radius: 2px; transition: 0.3s; margin-top: 20px; text-transform: uppercase; border: none; text-align: center; cursor: pointer; }
         .btn:hover { background: #fff; color: #000; }
+        
+        /* Engine Comparison Table Styles */
+        .comparison-table { width: 100%; border-collapse: collapse; margin-bottom: 50px; background: #050505; border: 1px solid #333; font-size: 0.85rem; }
+        .comparison-table th { background: #1a1a1a; color: #b8962e; padding: 15px; text-align: left; border: 1px solid #333; text-transform: uppercase; }
+        .comparison-table td { padding: 12px 15px; border: 1px solid #222; }
+        .engine-label { font-weight: bold; color: #b8962e; }
+        .lite-label { color: #6bab5c; }
+
         .tccc-input { width: 100%; background: #000; border: 1px solid #333; color: #b8962e; padding: 12px; font-family: 'Courier New', monospace; margin-bottom: 10px; outline: none; border-radius: 2px; }
         .contact-section { text-align: center; margin-top: 40px; padding: 40px 20px; border-top: 1px solid #333; }
         .social-section { text-align: center; padding: 20px; background: #0a0a0a; }
@@ -69,41 +77,42 @@
 
 <div class="container">
 
-    <div class="section" style="border-color: #4a7c3f;">
-        <div class="content-block">
-            <div class="launch-date" style="background: #4a7c3f; color: #fff;">LIVE NOW</div>
-            <h2 style="color: #6bab5c; border-bottom-color: #4a7c3f;">TCCC LITE SYSTEM</h2>
-            <p>An oversimplified, fast-paced adaptation of the TCCC System.</p>
-            
-            <div class="feature-item" style="border-left-color: #4a7c3f;">
-                <span class="highlight" style="color: #6bab5c;">SYSTEM INTEL:</span> 
-                <a href="blackjack.html" style="color: #6bab5c; text-decoration: none; border-bottom: 1px solid;">Click cover for full system & module details.</a>
-            </div>
+    <h2 style="text-align: center; border: none; margin-bottom: 20px;">Choose Your Protocol</h2>
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th class="engine-label">TCCC System (Full)</th>
+                <th class="lite-label">TCCC Lite</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Primary Focus</strong></td>
+                <td>Tactical Realism & Longevity</td>
+                <td>Cinematic Speed & One-Shots</td>
+            </tr>
+            <tr>
+                <td><strong>Core Mechanic</strong></td>
+                <td>Scalable Dice (d4-d12)</td>
+                <td>Blackjack-Style Resolution</td>
+            </tr>
+            <tr>
+                <td><strong>Lethality</strong></td>
+                <td>High (Injury Tracking)</td>
+                <td>Extreme (Narrative Brutality)</td>
+            </tr>
+            <tr>
+                <td><strong>Preparation</strong></td>
+                <td>Moderate (Toolkit Design)</td>
+                <td>Zero-Prep / Pick-up-and-play</td>
+            </tr>
+        </tbody>
+    </table>
 
-            <hr style="border: 0; border-top: 1px solid #333; margin: 20px 0;">
-            
-            <h3 style="color: #6bab5c; text-transform: uppercase;">Trouble at the Black Jack Saloon</h3>
-            <p>Experience the grit of the Old West. This module uses unique blackjack-style resolution.</p>
-            
-            <a href="https://www.drivethrurpg.com/en/publisher/33737/martin-lampron" target="_blank" class="btn" style="background: #4a7c3f; color: #fff;">Visit DriveThruRPG Store</a>
-        </div>
-        
-        <a href="blackjack.html">
-            <img src="saloon.jpg" alt="Trouble at the Black Jack Saloon Cover" class="book-cover" style="border-color: #4a7c3f;">
-        </a>
-    </div>
-
-    <div class="section" style="border-color: #b8962e; background: #1a1a00;">
-        <div class="content-block">
-            <div class="launch-date" style="background: #b8962e; color: #000;">LIVE NOW</div>
-            <h2 style="color: #b8962e; border-bottom-color: #b8962e;">THE HUNT FOR "SMALL" WHESTERFIELD</h2>
-            <p>The first major expansion for <i>Trouble at the Black Jack Saloon</i>. Bilingual (EN/FR) mini-campaign.</p>
-            <a href="https://www.drivethrurpg.com/en/publisher/33737/martin-lampron" target="_blank" class="btn">Acquire Expansion</a>
-        </div>
-        
-        <a href="blackjack.html">
-            <img src="small-Whesterfield.jpg" alt="The Hunt for Small Whesterfield Cover" class="book-cover" style="border-color: #b8962e;">
-        </a>
+    <div style="border-left: 4px solid #b8962e; padding-left: 20px; margin-bottom: 30px;">
+        <h2 style="margin-bottom: 5px;">I. THE CORE ENGINE: SAECULUM</h2>
+        <p style="color: #888; font-size: 0.9rem; margin-top: 0;">Universal Tactical Toolkit | Long-Term Campaigns</p>
     </div>
 
     <div class="section">
@@ -132,11 +141,58 @@
         </a>
     </div>
 
+    <div style="border-left: 4px solid #4a7c3f; padding-left: 20px; margin-bottom: 30px; margin-top: 80px;">
+        <h2 style="color: #6bab5c; margin-bottom: 5px;">II. THE LITE ENGINE: BLACKJACK</h2>
+        <p style="color: #888; font-size: 0.9rem; margin-top: 0;">Cinematic Precision | Fast-Filler | Zero-Prep</p>
+    </div>
+
+    <div class="section" style="border-color: #4a7c3f;">
+        <div class="content-block">
+            <div class="launch-date" style="background: #4a7c3f; color: #fff;">LIVE NOW</div>
+            <h2 style="color: #6bab5c; border-bottom-color: #4a7c3f;">TCCC LITE SYSTEM</h2>
+            <p>An oversimplified, fast-paced adaptation of the TCCC System. Designed for rapid resolution and high-stakes cinematic action.</p>
+            
+            <div class="feature-item" style="border-left-color: #4a7c3f;">
+                <span class="highlight" style="color: #6bab5c;">SYSTEM INTEL:</span> 
+                <a href="blackjack.html" style="color: #6bab5c; text-decoration: none; border-bottom: 1px solid;">Full system & module details.</a>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid #333; margin: 20px 0;">
+            
+            <h3 style="color: #6bab5c; text-transform: uppercase;">Trouble at the Black Jack Saloon</h3>
+            <p>Experience the grit of the Old West. This module uses unique blackjack-style resolution.</p>
+            
+            <a href="https://www.drivethrurpg.com/en/publisher/33737/martin-lampron" target="_blank" class="btn" style="background: #4a7c3f; color: #fff;">Visit DriveThruRPG Store</a>
+        </div>
+        
+        <a href="blackjack.html">
+            <img src="saloon.jpg" alt="Trouble at the Black Jack Saloon Cover" class="book-cover" style="border-color: #4a7c3f;">
+        </a>
+    </div>
+
+    <div class="section" style="border-color: #b8962e; background: #1a1a00;">
+        <div class="content-block">
+            <div class="launch-date" style="background: #b8962e; color: #000;">LIVE NOW</div>
+            <h2 style="color: #b8962e; border-bottom-color: #b8962e;">THE HUNT FOR "SMALL" WHESTERFIELD</h2>
+            <p>The first major expansion for <i>Trouble at the Black Jack Saloon</i>. Bilingual (EN/FR) mini-campaign.</p>
+            <a href="https://www.drivethrurpg.com/en/publisher/33737/martin-lampron" target="_blank" class="btn">Acquire Expansion</a>
+        </div>
+        
+        <a href="blackjack.html">
+            <img src="small-Whesterfield.jpg" alt="The Hunt for Small Whesterfield Cover" class="book-cover" style="border-color: #b8962e;">
+        </a>
+    </div>
+
+    <div style="border-left: 4px solid #8b0000; padding-left: 20px; margin-bottom: 30px; margin-top: 80px;">
+        <h2 style="color: #ff4d4d; margin-bottom: 5px;">III. NARRATIVE ASSETS</h2>
+        <p style="color: #888; font-size: 0.9rem; margin-top: 0;">Emergent Stories | Official Session Harrows</p>
+    </div>
+
     <div class="section" style="border-color: #8b0000; background: #110000;">
         <div class="content-block">
             <div class="launch-date" style="background: #8b0000; color: #fff;">EXPECTED 2027</div>
             <h2 style="color: #ff4d4d; border-bottom-color: #8b0000;">SAECULUM: CHRONICLE OF BLOOD</h2>
-            <p>A visceral novelization of the TCCC System in action. This collection features some of the harrows of emergent gameplay outcomes generated during official sessions.</p>
+            <p>A visceral novelization of the TCCC System in action. Features outcomes generated during official sessions.</p>
             
             <div class="feature-item" style="border-left-color: #8b0000;">
                 <span class="highlight" style="color: #ff4d4d;">SELECTED INTEL:</span>
@@ -145,7 +201,7 @@
                 <span class="highlight" style="color: #ff4d4d;">LEO LA CICATRICE:</span> A veteran's choice between vanity and survival.
             </div>
             <div class="feature-item" style="border-left-color: #8b0000; margin-left: 20px;">
-                <span class="highlight" style="color: #ff4d4d;">THE WHITE HUNGER:</span> A descent into madness in the frozen Saguenay backwoods.
+                <span class="highlight" style="color: #ff4d4d;">THE WHITE HUNGER:</span> A descent into madness in the frozen Saguenay.
             </div>
 
             <div class="feature-item" style="border-left-color: #8b0000; margin-top: 20px;">
