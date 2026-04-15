@@ -291,6 +291,13 @@
     langBtn.addEventListener('click', () => {
         const nextLang = localStorage.getItem('preferredLang') === 'fr' ? 'en' : 'fr';
         loadLanguage(nextLang);
+
+        // Tracking language switch in Google Analytics
+        if (typeof gtag === 'function') {
+            gtag('event', 'change_language', {
+                'language_selected': nextLang
+            });
+        }
     });
 
     // Run on startup
