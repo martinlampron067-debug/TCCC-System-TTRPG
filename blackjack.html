@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3HL00VZD9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-B3HL00VZD9');
-</script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B3HL00VZD9');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TCCC Lite | System Specs</title>
@@ -22,56 +22,95 @@
         .highlight { color: #6bab5c; font-weight: bold; }
         footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #444; }
         ul { padding-left: 20px; }
+
+        /* Language Button Style - Green Theme */
+        .lang-switcher { position: fixed; top: 20px; right: 20px; z-index: 1000; }
+        .lang-btn { background: #4a7c3f; color: #fff; border: none; padding: 8px 16px; font-family: 'Courier New', monospace; font-weight: bold; text-transform: uppercase; cursor: pointer; border-radius: 2px; }
     </style>
 </head>
 <body>
 
+<div class="lang-switcher">
+    <button id="lang-btn" class="lang-btn">Français</button>
+</div>
+
 <header>
-    <h1>TCCC LITE PROTOCOLS</h1>
-    <div style="color: #6bab5caa;">FAST-FILLER | HIGH STAKES | TACTICAL CHOICE</div>
+    <h1 data-key="lite_proto_h1">TCCC LITE PROTOCOLS</h1>
+    <div style="color: #6bab5caa;" data-key="lite_proto_sub">FAST-FILLER | HIGH STAKES | TACTICAL CHOICE</div>
 </header>
 
 <div class="container">
-    <a href="index.html" class="back-link"> < RETURN TO TERMINAL</a>
+    <a href="index.html" class="back-link" data-key="lite_return"> < RETURN TO TERMINAL</a>
 
     <section>
-        <h2>The Lite Philosophy</h2>
-        <p>TCCC Lite is a streamlined adaptation of the parent engine found in <em>Saeculum</em>. It is designed to be a "fast-filler"—perfect for one-shots or sessions where you want tactical depth without the weight of a 300-page manual.</p>
+        <h2 data-key="lite_phil_h2">The Lite Philosophy</h2>
+        <p data-key="lite_phil_p">TCCC Lite is a streamlined adaptation of the parent engine found in <em>Saeculum</em>. It is designed to be a "fast-filler"—perfect for one-shots or sessions where you want tactical depth without the weight of a 300-page manual.</p>
         
         <div class="tech-box">
-            <h3>Blackjack Resolution</h3>
-            <p>Unlike standard d20 systems, the Lite engine often utilizes a "push your luck" style resolution. This creates immediate tension: do you play it safe or risk a "bust" for a critical cinematic success?</p>
+            <h3 data-key="lite_bj_h3">Blackjack Resolution</h3>
+            <p data-key="lite_bj_p">Unlike standard d20 systems, the Lite engine often utilizes a "push your luck" style resolution. This creates immediate tension: do you play it safe or risk a "bust" for a critical cinematic success?</p>
         </div>
     </section>
 
     <section style="margin-top: 50px;">
-        <h2>Trouble at the Black Jack Saloon</h2>
-        <p>The premier module for the TCCC Lite system, transporting players to the unforgiving grit of the Old West.</p>
+        <h2 data-key="lite_saloon_h2">Trouble at the Black Jack Saloon</h2>
+        <p data-key="lite_saloon_p">The premier module for the TCCC Lite system, transporting players to the unforgiving grit of the Old West.</p>
         
         <div class="tech-box">
-            <h3>No "HP Bloat"</h3>
-            <p>In this system, you don't have a massive pool of health. Every shot counts. Wounds are tracked specifically, and a single well-placed bullet can permanently alter your character's effectiveness for the rest of the encounter.</p>
+            <h3 data-key="lite_hp_h3">No "HP Bloat"</h3>
+            <p data-key="lite_hp_p">In this system, you don't have a massive pool of health. Every shot counts. Wounds are tracked specifically, and a single well-placed bullet can permanently alter your character's effectiveness for the rest of the encounter.</p>
         </div>
 
         <div class="tech-box">
-            <h3>Veteran-Informed Mechanics</h3>
-            <p>Drawing from the author's 18 years of service in the Canadian Armed Forces, the combat mechanics focus on <span class="highlight">Tactical Leverage</span>. Positioning, cover, and the weight of your choices matter more than just the numbers on your sheet.</p>
+            <h3 data-key="lite_vet_h3">Veteran-Informed Mechanics</h3>
+            <p data-key="lite_vet_p">Drawing from the author's 18 years of service in the Canadian Armed Forces, the combat mechanics focus on <span class="highlight" data-key="lite_leverage">Tactical Leverage</span>. Positioning, cover, and the weight of your choices matter more than just the numbers on your sheet.</p>
         </div>
     </section>
 
     <section style="margin-top: 50px;">
-        <h2>Key Features</h2>
+        <h2 data-key="lite_features_h2">Key Features</h2>
         <ul>
-            <li><span class="highlight">Bilingual Support:</span> Fully playable in both English and Français.</li>
-            <li><span class="highlight">Zero-Prep:</span> Designed to get you from character creation to the first shootout in minutes.</li>
-            <li><span class="highlight">Cinematic Lethality:</span> Encourages creative solutions to avoid the deadly consequences of direct conflict.</li>
+            <li><span class="highlight" data-key="lite_feat_bi">Bilingual Support:</span> <span data-key="lite_feat_bi_p">Fully playable in both English and Français.</span></li>
+            <li><span class="highlight" data-key="lite_feat_zero">Zero-Prep:</span> <span data-key="lite_feat_zero_p">Designed to get you from character creation to the first shootout in minutes.</span></li>
+            <li><span class="highlight" data-key="lite_feat_cine">Cinematic Lethality:</span> <span data-key="lite_feat_cine_p">Encourages creative solutions to avoid the deadly consequences of direct conflict.</span></li>
         </ul>
     </section>
 </div>
 
-<footer>
+<footer data-key="lite_footer">
     &copy; 2026 TCCC SYSTEM | SALOON DOORS SECURED
 </footer>
+
+<script>
+    const langBtn = document.getElementById('lang-btn');
+    
+    async function loadLanguage(lang) {
+        try {
+            const response = await fetch('./lang.json');
+            const data = await response.json();
+            
+            document.querySelectorAll('[data-key]').forEach(el => {
+                const key = el.getAttribute('data-key');
+                if (data[lang][key]) {
+                    el.innerHTML = data[lang][key];
+                }
+            });
+
+            langBtn.textContent = lang === 'en' ? 'Français' : 'English';
+            localStorage.setItem('preferredLang', lang);
+        } catch (e) {
+            console.error("Language file not found or invalid", e);
+        }
+    }
+
+    langBtn.addEventListener('click', () => {
+        const nextLang = localStorage.getItem('preferredLang') === 'fr' ? 'en' : 'fr';
+        loadLanguage(nextLang);
+    });
+
+    const saved = localStorage.getItem('preferredLang') || 'en';
+    if (saved === 'fr') loadLanguage('fr');
+</script>
 
 </body>
 </html>
