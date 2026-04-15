@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3HL00VZD9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-B3HL00VZD9');
-</script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B3HL00VZD9');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TCCC System | Saeculum: Carneferreus Specs</title>
@@ -28,70 +28,111 @@
         .module-list li { margin-bottom: 12px; padding-left: 20px; position: relative; font-size: 0.95rem; }
         .module-list li::before { content: ">"; position: absolute; left: 0; color: #00f2ff; }
         .footer-note { margin-top: 50px; padding: 20px; border-top: 1px solid #333; text-align: center; font-size: 0.8rem; color: #666; }
+
+        /* Language Button Style */
+        .lang-switcher { position: fixed; top: 20px; right: 20px; z-index: 1000; }
+        .lang-btn { background: #00f2ff; color: #000; border: none; padding: 8px 16px; font-family: 'Courier New', monospace; font-weight: bold; text-transform: uppercase; cursor: pointer; border-radius: 2px; }
+
+        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
+<div class="lang-switcher">
+    <button id="lang-btn" class="lang-btn">Français</button>
+</div>
+
 <div class="nav-back">
-    <a href="index.html">← Return to Tactical Hub</a>
+    <a href="index.html" data-key="carne_return">← Return to Tactical Hub</a>
 </div>
 
 <div class="container">
     <header>
-        <div class="launch-date" style="background:#00f2ff; color:#000; display: inline-block; padding: 2px 10px; font-weight: bold; font-size: 0.8rem; margin-bottom: 10px;">EXPANSION INTEL</div>
-        <h1>SAECULUM: CARNEFERREUS</h1>
-        <div class="tagline">High-Consequence Survival | Fractured North America Setting</div>
+        <div class="launch-date" style="background:#00f2ff; color:#000; display: inline-block; padding: 2px 10px; font-weight: bold; font-size: 0.8rem; margin-bottom: 10px;" data-key="carne_intel_tag">EXPANSION INTEL</div>
+        <h1 data-key="carne_title_h1">SAECULUM: CARNEFERREUS</h1>
+        <div class="tagline" data-key="carne_tagline">High-Consequence Survival | Fractured North America Setting</div>
     </header>
 
-    <p>Carneferreus expands the Saeculum engine into a world of systemic futility. While the core system handles the operative, this module introduces the <span class="highlight">Machine</span>—detailed custom vehicle construction designed to survive the transition between corporate arcologies and the lethal wastes of the "Outside".</p>
+    <p data-key="carne_intro">Carneferreus expands the Saeculum engine into a world of systemic futility. While the core system handles the operative, this module introduces the <span class="highlight">Machine</span>—detailed custom vehicle construction designed to survive the transition between corporate arcologies and the lethal wastes of the "Outside".</p>
 
     <div class="spec-grid">
         <div class="spec-card" style="border-color: #00f2ff66;">
-            <h2>Custom Vehicle Construction</h2>
-            <p>Traditional mechs are replaced by gritty, customized rigs built for survival.</p>
+            <h2 data-key="carne_card1_h2">Custom Vehicle Construction</h2>
+            <p data-key="carne_card1_p">Traditional mechs are replaced by gritty, customized rigs built for survival.</p>
             <ul class="module-list">
-                <li><span class="highlight">Engineering:</span> Rules for building and modifying custom vehicles from scavenged parts.</li>
-                <li><span class="highlight">Navigation:</span> Specialized mechanics for traversing the "Outside" and the Urban Labyrinth.</li>
-                <li><span class="highlight">Environmental Toll:</span> Managing fuel, repairs, and systemic wear in toxic zones.</li>
+                <li><span class="highlight" data-key="carne_engineering">Engineering:</span> <span data-key="carne_engineering_p">Rules for building and modifying custom vehicles from scavenged parts.</span></li>
+                <li><span class="highlight" data-key="carne_navigation">Navigation:</span> <span data-key="carne_navigation_p">Specialized mechanics for traversing the "Outside" and the Urban Labyrinth.</span></li>
+                <li><span class="highlight" data-key="carne_toll">Environmental Toll:</span> <span data-key="carne_toll_p">Managing fuel, repairs, and systemic wear in toxic zones.</span></li>
             </ul>
         </div>
 
         <div class="spec-card">
-            <h2>The Grid & Hacking</h2>
-            <p>Engage with the digital shadows of a fractured society.</p>
+            <h2 data-key="carne_card2_h2">The Grid & Hacking</h2>
+            <p data-key="carne_card2_p">Engage with the digital shadows of a fractured society.</p>
             <ul class="module-list">
-                <li><span class="highlight">Ghost Grid:</span> High-stakes data hustle within the remnants of the old networks.</li>
-                <li><span class="highlight">Meat-Space Cracking:</span> Physical hacking modules that require tactical presence.</li>
-                <li><span class="highlight">EMP Management:</span> Surviving and managing EMP storms that threaten all electronics.</li>
+                <li><span class="highlight" data-key="carne_ghost">Ghost Grid:</span> <span data-key="carne_ghost_p">High-stakes data hustle within the remnants of the old networks.</span></li>
+                <li><span class="highlight" data-key="carne_cracking">Meat-Space Cracking:</span> <span data-key="carne_cracking_p">Physical hacking modules that require tactical presence.</span></li>
+                <li><span class="highlight" data-key="carne_emp">EMP Management:</span> <span data-key="carne_emp_p">Surviving and managing EMP storms that threaten all electronics.</span></li>
             </ul>
         </div>
 
         <div class="spec-card">
-            <h2>The Dual Economy</h2>
-            <p>Survive in a world where currency is dead but value remains.</p>
+            <h2 data-key="carne_card3_h2">The Dual Economy</h2>
+            <p data-key="carne_card3_p">Survive in a world where currency is dead but value remains.</p>
             <ul class="module-list">
-                <li><span class="highlight">Barter & Trade:</span> Deep systems for resource exchange in the absence of stable credits.</li>
-                <li><span class="highlight">Investment:</span> Long-term resource management to secure your holdout.</li>
-                <li><span class="highlight">Systemic Futility:</span> Gameplay influenced by widespread ignorance and corporate gatekeeping.</li>
+                <li><span class="highlight" data-key="carne_barter">Barter & Trade:</span> <span data-key="carne_barter_p">Deep systems for resource exchange in the absence of stable credits.</span></li>
+                <li><span class="highlight" data-key="carne_investment">Investment:</span> <span data-key="carne_investment_p">Long-term resource management to secure your holdout.</span></li>
+                <li><span class="highlight" data-key="carne_futility">Systemic Futility:</span> <span data-key="carne_futility_p">Gameplay influenced by widespread ignorance and corporate gatekeeping.</span></li>
             </ul>
         </div>
 
         <div class="spec-card" style="border-color: #00f2ff66;">
-            <h2>The Fractured Blocs</h2>
-            <p>Navigate the dangerous socio-political landscape of 2027.</p>
+            <h2 data-key="carne_card4_h2">The Fractured Blocs</h2>
+            <p data-key="carne_card4_p">Navigate the dangerous socio-political landscape of 2027.</p>
             <ul class="module-list">
-                <li><span class="highlight">Green Arcologies:</span> Corporate mega-farms—islands of luxury in a sea of rot.</li>
-                <li><span class="highlight">The Holdouts:</span> Remnants of "Good Old America" struggling to maintain autonomy.</li>
-                <li><span class="highlight">The Void:</span> Areas where neither law nor corporate reach extends.</li>
+                <li><span class="highlight" data-key="carne_arco">Green Arcologies:</span> <span data-key="carne_arco_p">Corporate mega-farms—islands of luxury in a sea of rot.</span></li>
+                <li><span class="highlight" data-key="carne_holdouts">The Holdouts:</span> <span data-key="carne_holdouts_p">Remnants of "Good Old America" struggling to maintain autonomy.</span></li>
+                <li><span class="highlight" data-key="carne_void">The Void:</span> <span data-key="carne_void_p">Areas where neither law nor corporate reach extends.</span></li>
             </ul>
         </div>
     </div>
 
-    <div class="footer-note">
+    <div class="footer-note" data-key="carne_footer">
         CORE SYSTEM REQUIREMENTS: SAECULUM: BLOOD OF AGES <br>
         DESIGNED BY MARTIN LAMPRON | EXPECTED 2027
     </div>
 </div>
+
+<script>
+    const langBtn = document.getElementById('lang-btn');
+    
+    async function loadLanguage(lang) {
+        try {
+            const response = await fetch('lang.json');
+            const data = await response.json();
+            
+            document.querySelectorAll('[data-key]').forEach(el => {
+                const key = el.getAttribute('data-key');
+                if (data[lang][key]) {
+                    el.innerHTML = data[lang][key];
+                }
+            });
+
+            langBtn.textContent = lang === 'en' ? 'Français' : 'English';
+            localStorage.setItem('preferredLang', lang);
+        } catch (e) {
+            console.error("Language file not found or invalid", e);
+        }
+    }
+
+    langBtn.addEventListener('click', () => {
+        const nextLang = localStorage.getItem('preferredLang') === 'fr' ? 'en' : 'fr';
+        loadLanguage(nextLang);
+    });
+
+    const saved = localStorage.getItem('preferredLang') || 'en';
+    if (saved === 'fr') loadLanguage('fr');
+</script>
 
 </body>
 </html>
