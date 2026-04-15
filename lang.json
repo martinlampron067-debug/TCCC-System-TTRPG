@@ -1,12 +1,14 @@
 {
   "en": {
-    "nav_rules": "Rules",
-    "nav_char": "Character Creation",
-    "welcome": "Welcome to TCCC System"
+    "header_h1": "TCCC SYSTEM",
+    "protocol_title": "Choose Your Protocol",
+    "sec1_title": "I. THE CORE ENGINE: TCCC SYSTEM",
+    "send_btn": "SEND SIGNAL"
   },
   "fr": {
-    "nav_rules": "Règles",
-    "nav_char": "Création de Personnage",
-    "welcome": "Bienvenue au système TCCC"
+    "header_h1": "SYSTÈME TCCC",
+    "protocol_title": "Choisissez Votre Protocole",
+    "sec1_title": "I. LE MOTEUR CENTRAL : SYSTÈME TCCC",
+    "send_btn": "ENVOYER LE SIGNAL"
   }
 }
