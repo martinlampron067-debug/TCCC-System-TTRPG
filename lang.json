@@ -1,0 +1,12 @@
+{
+  "en": {
+    "nav_rules": "Rules",
+    "nav_char": "Character Creation",
+    "welcome": "Welcome to TCCC System"
+  },
+  "fr": {
+    "nav_rules": "Règles",
+    "nav_char": "Création de Personnage",
+    "welcome": "Bienvenue au système TCCC"
+  }
+}
