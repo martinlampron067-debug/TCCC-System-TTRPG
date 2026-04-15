@@ -60,6 +60,25 @@
         .social-link:hover { border-bottom: 1px solid #b8962e; color: #fff; }
         footer { text-align: center; padding: 40px 20px; font-size: 0.8rem; color: #555; border-top: 1px solid #1a1a1a; }
 
+        /* ADDED: Language Button Style */
+        .lang-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .lang-btn {
+            background: #b8962e;
+            color: #000;
+            border: none;
+            padding: 8px 16px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+
         @media (max-width: 768px) { 
             body { font-size: 18px; } 
             .section { display: block; padding: 20px; } 
@@ -69,59 +88,63 @@
 </head>
 <body>
 
+<div class="lang-switcher">
+    <button id="lang-btn" class="lang-btn">Français</button>
+</div>
+
 <header>
-    <h1>TCCC SYSTEM</h1>
-    <div class="tagline">Tactical Combat & Creative Cinematic System</div>
-    <p>Realistic Toolkit | Fast-Play Precision | Veteran-Designed</p>
+    <h1 data-key="header_h1">TCCC SYSTEM</h1>
+    <div class="tagline" data-key="header_tagline">Tactical Combat & Creative Cinematic System</div>
+    <p data-key="header_sub">Realistic Toolkit | Fast-Play Precision | Veteran-Designed</p>
 </header>
 
 <div class="container">
 
-    <h2 style="text-align: center; border: none; margin-bottom: 20px;">Choose Your Protocol</h2>
+    <h2 style="text-align: center; border: none; margin-bottom: 20px;" data-key="protocol_title">Choose Your Protocol</h2>
     <table class="comparison-table">
         <thead>
             <tr>
-                <th>Feature</th>
-                <th class="engine-label">TCCC System (Full)</th>
-                <th class="lite-label">TCCC Lite</th>
+                <th data-key="th_feature">Feature</th>
+                <th class="engine-label" data-key="th_full">TCCC System (Full)</th>
+                <th class="lite-label" data-key="th_lite">TCCC Lite</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><strong>Primary Focus</strong></td>
-                <td>Tactical Realism & Longevity</td>
-                <td>Cinematic Speed & One-Shots</td>
+                <td><strong data-key="td_focus">Primary Focus</strong></td>
+                <td data-key="td_focus_full">Tactical Realism & Longevity</td>
+                <td data-key="td_focus_lite">Cinematic Speed & One-Shots</td>
             </tr>
             <tr>
-                <td><strong>Core Mechanic</strong></td>
-                <td>Scalable Dice (d4-d12)</td>
-                <td>Blackjack-Style Resolution</td>
+                <td><strong data-key="td_mech">Core Mechanic</strong></td>
+                <td data-key="td_mech_full">Scalable Dice (d4-d12)</td>
+                <td data-key="td_mech_lite">Blackjack-Style Resolution</td>
             </tr>
             <tr>
-                <td><strong>Lethality</strong></td>
-                <td>Very High (Injury Tracking)</td>
-                <td>High (Narrative Brutality)</td>
+                <td><strong data-key="td_lethal">Lethality</strong></td>
+                <td data-key="td_lethal_full">Very High (Injury Tracking)</td>
+                <td data-key="td_lethal_lite">High (Narrative Brutality)</td>
             </tr>
             <tr>
-                <td><strong>Preparation</strong></td>
-                <td>Moderate (Toolkit Design)</td>
-                <td>Zero-Prep / Pick-up-and-play</td>
+                <td><strong data-key="td_prep">Preparation</strong></td>
+                <td data-key="td_prep_full">Moderate (Toolkit Design)</td>
+                <td data-key="td_prep_lite">Zero-Prep / Pick-up-and-play</td>
             </tr>
         </tbody>
     </table>
 
     <div style="border-left: 4px solid #b8962e; padding-left: 20px; margin-bottom: 30px;">
-        <h2 style="margin-bottom: 5px;">I. THE CORE ENGINE: TCCC SYSTEM</h2>
-        <p style="color: #888; font-size: 0.9rem; margin-top: 0;">Inside the Saeculum Line | Universal Tactical Toolkit</p>
+        <h2 style="margin-bottom: 5px;" data-key="sec1_title">I. THE CORE ENGINE: TCCC SYSTEM</h2>
+        <p style="color: #888; font-size: 0.9rem; margin-top: 0;" data-key="sec1_sub">Inside the Saeculum Line | Universal Tactical Toolkit</p>
     </div>
 
     <div class="section">
         <div class="content-block">
-            <div class="launch-date">EXPECTED 2027</div>
-            <h2>SAECULUM: BLOOD OF AGES</h2>
-            <p>A genre-agnostic toolkit across all ages of human evolution. Whether you are running primitive survival, a desert raid, or space opera, the mechanics adapt while keeping math consistent.</p>
-            <div class="feature-item"><span class="highlight">SCALABLE DICE:</span> Rank 1 (d4) to Rank 5 (d12) resolution.</div>
-            <div class="feature-item"><span class="highlight">SYSTEM INTEL:</span> <a href="saeculum-details.html" style="color: #b8962e; text-decoration: none; border-bottom: 1px solid;">Click cover for mechanical intel.</a></div>
+            <div class="launch-date" data-key="launch_2027">EXPECTED 2027</div>
+            <h2 data-key="saeculum_h2">SAECULUM: BLOOD OF AGES</h2>
+            <p data-key="saeculum_p">A genre-agnostic toolkit across all ages of human evolution. Whether you are running primitive survival, a desert raid, or space opera, the mechanics adapt while keeping math consistent.</p>
+            <div class="feature-item"><span class="highlight" data-key="dice_label">SCALABLE DICE:</span> <span data-key="dice_text">Rank 1 (d4) to Rank 5 (d12) resolution.</span></div>
+            <div class="feature-item"><span class="highlight" data-key="intel_label">SYSTEM INTEL:</span> <a href="saeculum-details.html" style="color: #b8962e; text-decoration: none; border-bottom: 1px solid;" data-key="intel_link">Click cover for mechanical intel.</a></div>
         </div>
         <a href="saeculum-details.html">
             <img src="bloodofages.jpg" alt="Saeculum Core Cover" class="book-cover">
@@ -130,11 +153,11 @@
 
     <div class="section" style="border-color: #00f2ff44;">
         <div class="content-block">
-            <div class="launch-date" style="background:#00f2ff; color:#000;">EXPECTED 2027</div>
-            <h2 style="color: #00f2ff; border-bottom-color: #00f2ff;">SAECULUM: CARNEFERREUS</h2>
-            <p>The expansion for the Saeculum engine. High-consequence survival in a fractured post-apocalyptic / cyberpunk North America.</p>
-            <div class="feature-item"><span class="highlight" style="color: #00f2ff;">DATA HUSTLE:</span> Gritty "Cracking" mechanics in meat-space.</div>
-            <div class="feature-item"><span class="highlight" style="color: #00f2ff;">NEON INTEL:</span> <a href="carneferreus-details.html" style="color: #00f2ff; text-decoration: none; border-bottom: 1px solid;">Click cover to decode expansion specs.</a></div>
+            <div class="launch-date" style="background:#00f2ff; color:#000;" data-key="launch_2027">EXPECTED 2027</div>
+            <h2 style="color: #00f2ff; border-bottom-color: #00f2ff;" data-key="carne_h2">SAECULUM: CARNEFERREUS</h2>
+            <p data-key="carne_p">The expansion for the Saeculum engine. High-consequence survival in a fractured post-apocalyptic / cyberpunk North America.</p>
+            <div class="feature-item"><span class="highlight" style="color: #00f2ff;" data-key="data_hustle">DATA HUSTLE:</span> <span data-key="data_hustle_text">Gritty "Cracking" mechanics in meat-space.</span></div>
+            <div class="feature-item"><span class="highlight" style="color: #00f2ff;" data-key="neon_intel">NEON INTEL:</span> <a href="carneferreus-details.html" style="color: #00f2ff; text-decoration: none; border-bottom: 1px solid;" data-key="neon_link">Click cover to decode expansion specs.</a></div>
         </div>
         <a href="carneferreus-details.html">
             <img src="carneferraus.jpg" alt="Carneferreus Expansion Cover" class="book-cover">
@@ -142,27 +165,27 @@
     </div>
 
     <div style="border-left: 4px solid #4a7c3f; padding-left: 20px; margin-bottom: 30px; margin-top: 80px;">
-        <h2 style="color: #6bab5c; margin-bottom: 5px;">II. THE TCCC LITE ENGINE: BLACKJACK</h2>
-        <p style="color: #888; font-size: 0.9rem; margin-top: 0;">Cinematic Precision | Fast-Filler | Zero-Prep</p>
+        <h2 style="color: #6bab5c; margin-bottom: 5px;" data-key="sec2_title">II. THE TCCC LITE ENGINE: BLACKJACK</h2>
+        <p style="color: #888; font-size: 0.9rem; margin-top: 0;" data-key="sec2_sub">Cinematic Precision | Fast-Filler | Zero-Prep</p>
     </div>
 
     <div class="section" style="border-color: #4a7c3f;">
         <div class="content-block">
-            <div class="launch-date" style="background: #4a7c3f; color: #fff;">LIVE NOW</div>
-            <h2 style="color: #6bab5c; border-bottom-color: #4a7c3f;">TCCC LITE SYSTEM</h2>
-            <p>An oversimplified, fast-paced adaptation of the TCCC System. Designed for rapid resolution and high-stakes cinematic action.</p>
+            <div class="launch-date" style="background: #4a7c3f; color: #fff;" data-key="live_now">LIVE NOW</div>
+            <h2 style="color: #6bab5c; border-bottom-color: #4a7c3f;" data-key="lite_h2">TCCC LITE SYSTEM</h2>
+            <p data-key="lite_p">An oversimplified, fast-paced adaptation of the TCCC System. Designed for rapid resolution and high-stakes cinematic action.</p>
             
             <div class="feature-item" style="border-left-color: #4a7c3f;">
-                <span class="highlight" style="color: #6bab5c;">SYSTEM INTEL:</span> 
-                <a href="blackjack.html" style="color: #6bab5c; text-decoration: none; border-bottom: 1px solid;">Full system & module details.</a>
+                <span class="highlight" style="color: #6bab5c;" data-key="intel_label">SYSTEM INTEL:</span> 
+                <a href="blackjack.html" style="color: #6bab5c; text-decoration: none; border-bottom: 1px solid;" data-key="lite_intel_link">Full system & module details.</a>
             </div>
 
             <hr style="border: 0; border-top: 1px solid #333; margin: 20px 0;">
             
-            <h3 style="color: #6bab5c; text-transform: uppercase;">Trouble at the Black Jack Saloon</h3>
-            <p>Experience the grit of the Old West. This all in one game uses unique blackjack-style resolution.</p>
+            <h3 style="color: #6bab5c; text-transform: uppercase;" data-key="saloon_h3">Trouble at the Black Jack Saloon</h3>
+            <p data-key="saloon_p">Experience the grit of the Old West. This all in one game uses unique blackjack-style resolution.</p>
             
-            <a href="https://www.drivethrurpg.com/en/publisher/33737/martin-lampron" target="_blank" class="btn" style="background: #4a7c3f; color: #fff;">Visit DriveThruRPG Store</a>
+            <a href="https://www.drivethrurpg.com/en/publisher/33737/martin-lampron" target="_blank" class="btn" style="background: #4a7c3f; color: #fff;" data-key="store_btn">Visit DriveThruRPG Store</a>
         </div>
         
         <a href="blackjack.html">
@@ -172,10 +195,10 @@
 
     <div class="section" style="border-color: #b8962e; background: #1a1a00;">
         <div class="content-block">
-            <div class="launch-date" style="background: #b8962e; color: #000;">LIVE NOW</div>
-            <h2 style="color: #b8962e; border-bottom-color: #b8962e;">THE HUNT FOR "SMALL" WHESTERFIELD</h2>
-            <p>The first major expansion for <i>Trouble at the Black Jack Saloon</i>. Bilingual (EN/FR) mini-campaign.</p>
-            <a href="https://www.drivethrurpg.com/en/publisher/33737/martin-lampron" target="_blank" class="btn">Acquire Expansion</a>
+            <div class="launch-date" style="background: #b8962e; color: #000;" data-key="live_now">LIVE NOW</div>
+            <h2 style="color: #b8962e; border-bottom-color: #b8962e;" data-key="hunt_h2">THE HUNT FOR "SMALL" WHESTERFIELD</h2>
+            <p data-key="hunt_p">The first major expansion for <i>Trouble at the Black Jack Saloon</i>. Bilingual (EN/FR) mini-campaign.</p>
+            <a href="https://www.drivethrurpg.com/en/publisher/33737/martin-lampron" target="_blank" class="btn" data-key="acquire_btn">Acquire Expansion</a>
         </div>
         
         <a href="blackjack.html">
@@ -184,40 +207,40 @@
     </div>
 
     <div style="border-left: 4px solid #8b0000; padding-left: 20px; margin-bottom: 30px; margin-top: 80px;">
-        <h2 style="color: #ff4d4d; margin-bottom: 5px;">III. NARRATIVE ASSETS</h2>
-        <p style="color: #888; font-size: 0.9rem; margin-top: 0;">Emergent Stories | Official Session Harrows</p>
+        <h2 style="color: #ff4d4d; margin-bottom: 5px;" data-key="sec3_title">III. NARRATIVE ASSETS</h2>
+        <p style="color: #888; font-size: 0.9rem; margin-top: 0;" data-key="sec3_sub">Emergent Stories | Official Session Harrows</p>
     </div>
 
     <div class="section" style="border-color: #8b0000; background: #110000;">
         <div class="content-block">
-            <div class="launch-date" style="background: #8b0000; color: #fff;">EXPECTED 2027</div>
-            <h2 style="color: #ff4d4d; border-bottom-color: #8b0000;">SAECULUM: CHRONICLE OF BLOOD</h2>
-            <p>A visceral novelization of the TCCC System in action. Features outcomes generated during official sessions.</p>
+            <div class="launch-date" style="background: #8b0000; color: #fff;" data-key="launch_2027">EXPECTED 2027</div>
+            <h2 style="color: #ff4d4d; border-bottom-color: #8b0000;" data-key="chronicle_h2">SAECULUM: CHRONICLE OF BLOOD</h2>
+            <p data-key="chronicle_p">A visceral novelization of the TCCC System in action. Features outcomes generated during official sessions.</p>
             
             <div class="feature-item" style="border-left-color: #8b0000;">
-                <span class="highlight" style="color: #ff4d4d;">SELECTED INTEL:</span>
+                <span class="highlight" style="color: #ff4d4d;" data-key="selected_intel">SELECTED INTEL:</span>
             </div>
             <div class="feature-item" style="border-left-color: #8b0000; margin-left: 20px;">
-                <span class="highlight" style="color: #ff4d4d;">LEO LA CICATRICE:</span> A veteran's choice between vanity and survival.
+                <span class="highlight" style="color: #ff4d4d;" data-key="leo_label">LEO LA CICATRICE:</span> <span data-key="leo_text">A veteran's choice between vanity and survival.</span>
             </div>
             <div class="feature-item" style="border-left-color: #8b0000; margin-left: 20px;">
-                <span class="highlight" style="color: #ff4d4d;">THE WHITE HUNGER:</span> A descent into madness in the frozen Saguenay.
+                <span class="highlight" style="color: #ff4d4d;" data-key="hunger_label">THE WHITE HUNGER:</span> <span data-key="hunger_text">A descent into madness in the frozen Saguenay.</span>
             </div>
 
             <div class="feature-item" style="border-left-color: #8b0000; margin-top: 20px;">
-                <span class="highlight" style="color: #ff4d4d;">NARRATIVE BYPASS:</span> 
-                <a href="chronicle-extract.html" style="color: #ff4d4d; text-decoration: none; border-bottom: 1px solid;">Read "The White Hunger" Extract</a>
+                <span class="highlight" style="color: #ff4d4d;" data-key="narrative_bypass">NARRATIVE BYPASS:</span> 
+                <a href="chronicle-extract.html" style="color: #ff4d4d; text-decoration: none; border-bottom: 1px solid;" data-key="read_extract">Read "The White Hunger" Extract</a>
             </div>
         </div>
         <div class="book-cover" style="display: flex; align-items: center; justify-content: center; background: #0a0a0a; color: #8b0000; border: 2px dashed #8b0000; height: 350px; min-width: 250px;">
-            <p style="text-align: center; padding: 20px; font-weight: bold;">COVER ART PENDING<br>[REDACTED]</p>
+            <p style="text-align: center; padding: 20px; font-weight: bold;" data-key="cover_pending">COVER ART PENDING<br>[REDACTED]</p>
         </div>
     </div>
 
     <div class="contact-section">
-        <h2 style="margin-top:0;">FIELD REPORT</h2>
+        <h2 style="margin-top:0;" data-key="field_title">FIELD REPORT</h2>
 
-        <p style="max-width: 600px; margin: 0 auto 20px auto; color: #b8962e; font-size: 1rem; border: 1px solid #333; padding: 15px; background: #151515;">
+        <p style="max-width: 600px; margin: 0 auto 20px auto; color: #b8962e; font-size: 1rem; border: 1px solid #333; padding: 15px; background: #151515;" data-key="field_p">
             If you have any questions, comments or if you are interested in playtesting either the <span class="highlight">TCCC Lite</span> or the <span class="highlight">Full TCCC engine</span>, please fill out the field report below. I am available for online play, as well as in-person sessions if you are near the <span class="highlight">Drummondville</span> area.
         </p>
 
@@ -227,7 +250,7 @@
                 <input type="email" name="email" placeholder="[RETURN EMAIL]" required class="tccc-input" style="flex: 1;">
             </div>
             <textarea name="message" placeholder="[SITUATION REPORT]" rows="5" required class="tccc-input" style="resize: vertical;"></textarea>
-            <button type="submit" class="btn" style="width: 100%; cursor: pointer;">SEND SIGNAL</button>
+            <button type="submit" class="btn" style="width: 100%; cursor: pointer;" data-key="send_btn">SEND SIGNAL</button>
         </form>
     </div>
 
@@ -239,9 +262,41 @@
 </div>
 
 <footer>
-    &copy; 2026 TCCC SYSTEM | CREATED BY MARTIN LAMPRON <br>
-    CANADIAN ARMED FORCES VETERAN DESIGNED.
+    &copy; 2026 TCCC SYSTEM | <span data-key="footer_created">CREATED BY MARTIN LAMPRON</span> <br>
+    <span data-key="footer_vet">CANADIAN ARMED FORCES VETERAN DESIGNED.</span>
 </footer>
+
+<script>
+    const langBtn = document.getElementById('lang-btn');
+    
+    async function loadLanguage(lang) {
+        try {
+            const response = await fetch('lang.json');
+            const data = await response.json();
+            
+            document.querySelectorAll('[data-key]').forEach(el => {
+                const key = el.getAttribute('data-key');
+                if (data[lang][key]) {
+                    el.innerHTML = data[lang][key];
+                }
+            });
+
+            langBtn.textContent = lang === 'en' ? 'Français' : 'English';
+            localStorage.setItem('preferredLang', lang);
+        } catch (e) {
+            console.error("Language file not found or invalid", e);
+        }
+    }
+
+    langBtn.addEventListener('click', () => {
+        const nextLang = localStorage.getItem('preferredLang') === 'fr' ? 'en' : 'fr';
+        loadLanguage(nextLang);
+    });
+
+    // Run on startup
+    const saved = localStorage.getItem('preferredLang') || 'en';
+    if (saved === 'fr') loadLanguage('fr');
+</script>
 
 </body>
 </html>
