@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+      (function() {
+        var url = new URL(window.location.href);
+        if (url.searchParams.has('fbclid')) {
+          url.searchParams.delete('fbclid');
+          var cleanUrl = url.pathname + url.search + url.hash;
+          window.history.replaceState({}, document.title, cleanUrl);
+        }
+      })();
+    </script>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3HL00VZD9"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -8,27 +19,55 @@
       gtag('js', new Date());
       gtag('config', 'G-B3HL00VZD9');
     </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saeculum: Blood of Ages | System Intel</title>
+    <title>TCCC System | Realistic RPG Toolkit</title>
+
+    <meta name="title" content="TCCC System | Tactical Combat & Creative Cinematic RPG">
+    <meta name="description" content="TCCC System: All In One realistic RPG toolkit / Un outil tout en un de JDR réaliste par Martin Lampron. Scalable d4-d12 resolution, tactical combat, système de jeu de rôle tactique.">
+    <meta name="keywords" content="TTRPG, JDR, jeu de rôle, tactique, Martin Lampron, TCCC System, TCCC Lite, Québec, Drummondville, Modular TTRPG, realistic RPG, Saeculum Blood of Ages, Trouble at the BlackJack Saloon, Hunt for Small Whesterfield, Carneferreus, Saeculum Chronicle of Blood">
+    <meta name="author" content="Martin Lampron">
+
     <style>
-        body { background-color: #0a0a0a; color: #e0e0e0; font-family: 'Courier New', monospace; margin: 0; line-height: 1.6; }
-        header { padding: 40px; text-align: center; border-bottom: 3px solid #b8962e; background: #1a1a1a; }
-        h1, h2, h3 { color: #b8962e; text-transform: uppercase; letter-spacing: 3px; }
-        .container { max-width: 900px; margin: auto; padding: 40px 20px; }
-        .back-link { color: #b8962e; text-decoration: none; font-weight: bold; display: inline-block; margin-bottom: 20px; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px; }
-        .tech-box { border: 1px solid #333; padding: 20px; background: #111; border-left: 4px solid #b8962e; height: 100%; }
+        * { box-sizing: border-box; } 
+        body { background-color: #0a0a0a; color: #e0e0e0; font-family: 'Courier New', Courier, monospace; margin: 0; line-height: 1.6; overflow-x: hidden; }
+        header { padding: 60px 20px; text-align: center; border-bottom: 3px solid #b8962e; background: linear-gradient(to bottom, #1a1a1a, #0a0a0a); }
+        h1 { color: #b8962e; margin: 0; letter-spacing: 5px; font-size: 2.5rem; text-transform: uppercase; }
+        .tagline { color: #888; margin-top: 10px; font-size: 1.1rem; text-transform: uppercase; }
+        .container { max-width: 1000px; margin: auto; padding: 40px 20px; }
+        .section { margin-bottom: 50px; padding: 30px; border: 1px solid #333; border-radius: 4px; background: #111; display: flex; flex-wrap: wrap; gap: 30px; align-items: flex-start; justify-content: center; }
+        .content-block { flex: 1; min-width: 300px; }
+        .book-cover { width: 250px; height: auto; border: 1px solid #444; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.7); transition: 0.3s; display: block; }
+        .book-cover:hover { border-color: #b8962e; transform: scale(1.02); cursor: pointer; }
+        h2 { color: #b8962e; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 10px; margin-top: 0; }
         .highlight { color: #b8962e; font-weight: bold; }
-        footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #555; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
+        .feature-item { margin-bottom: 15px; display: block; border-left: 2px solid #b8962e; padding-left: 15px; font-size: 0.95rem; }
+        .launch-date { display: inline-block; background: #b8962e; color: #000; padding: 4px 12px; font-weight: bold; border-radius: 2px; font-size: 0.85rem; margin-bottom: 15px; text-transform: uppercase; }
+        .btn { display: inline-block; padding: 14px 30px; background: #b8962e; color: #000; text-decoration: none; font-weight: bold; border-radius: 2px; transition: 0.3s; margin-top: 20px; text-transform: uppercase; border: none; text-align: center; cursor: pointer; }
+        .btn:hover { background: #fff; color: #000; }
         
-        /* Language Button Style */
+        .comparison-table { width: 100%; border-collapse: collapse; margin-bottom: 50px; background: #050505; border: 1px solid #333; font-size: 0.85rem; }
+        .comparison-table th { background: #1a1a1a; color: #b8962e; padding: 15px; text-align: left; border: 1px solid #333; text-transform: uppercase; }
+        .comparison-table td { padding: 12px 15px; border: 1px solid #222; }
+        .engine-label { font-weight: bold; color: #b8962e; }
+        .lite-label { color: #6bab5c; }
+
+        .tccc-input { width: 100%; background: #000; border: 1px solid #333; color: #b8962e; padding: 12px; font-family: 'Courier New', monospace; margin-bottom: 10px; outline: none; border-radius: 2px; }
+        .contact-section { text-align: center; margin-top: 40px; padding: 40px 20px; border-top: 1px solid #333; }
+        .social-section { text-align: center; padding: 20px; background: #0a0a0a; }
+        .social-link { color: #b8962e; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; border-bottom: 1px solid transparent; transition: 0.3s; }
+        .social-link:hover { border-bottom: 1px solid #b8962e; color: #fff; }
+        footer { text-align: center; padding: 40px 20px; font-size: 0.8rem; color: #555; border-top: 1px solid #1a1a1a; }
+
         .lang-switcher { position: fixed; top: 20px; right: 20px; z-index: 1000; }
         .lang-btn { background: #b8962e; color: #000; border: none; padding: 8px 16px; font-family: 'Courier New', monospace; font-weight: bold; text-transform: uppercase; cursor: pointer; border-radius: 2px; }
 
-        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) { 
+            body { font-size: 18px; } 
+            .section { display: block; padding: 20px; } 
+            .book-cover { width: 100%; max-width: 260px; margin: 20px auto !important; } 
+        }
     </style>
 </head>
 <body>
@@ -38,107 +77,190 @@
 </div>
 
 <header>
-    <h1 data-key="sae_spec_title">SYSTEM SPECIFICATIONS</h1>
-    <div style="color: #888;" data-key="sae_spec_sub">SAECULUM: BLOOD OF AGES CORE ENGINE</div>
+    <h1 data-key="header_h1">TCCC SYSTEM</h1>
+    <div class="tagline" data-key="header_tagline">Tactical Combat & Creative Cinematic System</div>
+    <p data-key="header_sub">Realistic Toolkit | Fast-Play Precision | Veteran-Designed</p>
 </header>
 
 <div class="container">
-    <a href="index.html" class="back-link" data-key="sae_return"> < RETURN TO MAIN TERMINAL</a>
 
-    <section>
-        <h2 data-key="sae_res_h2">The TCCC Resolution</h2>
-        <p data-key="sae_res_p">Saeculum Blood of Ages utilizes the <strong>Tactical Combat and Creative Cinematic (TCCC)</strong> system. It replaces flat probability with a Rank-based dice progression (d4 to d12), ensuring that as your operative improves, their potential for greatness scales exponentially.</p>
-        
-        <div class="grid">
-            <div class="tech-box">
-                <h3 data-key="sae_dice_h3">Dice Ranks</h3>
-                <p data-key="sae_dice_p">Attributes and Skills are rated 1 to 5:</p>
-                <ul>
-    <li><span data-key="rank_1">Rank 1: d4</span></li>
-    <li><span data-key="rank_3">Rank 3: d8 (Professional)</span></li>
-    <li><span data-key="rank_5">Rank 5: d12 (Elite)</span></li>
-</ul>
-                <p><em data-key="sae_exploding">Exploding Dice: Max rolls trigger an immediate reroll and addition.</em></p>
+    <h2 style="text-align: center; border: none; margin-bottom: 20px;" data-key="protocol_title">Choose Your Protocol</h2>
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th data-key="th_feature">Feature</th>
+                <th class="engine-label" data-key="th_full">TCCC System (Full)</th>
+                <th class="lite-label" data-key="th_lite">TCCC Lite</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong data-key="td_focus">Primary Focus</strong></td>
+                <td data-key="td_focus_full">Tactical Realism & Longevity</td>
+                <td data-key="td_focus_lite">Cinematic Speed & One-Shots</td>
+            </tr>
+            <tr>
+                <td><strong data-key="td_mech">Core Mechanic</strong></td>
+                <td data-key="td_mech_full">Scalable Dice (d4-d12)</td>
+                <td data-key="td_mech_lite">Blackjack-Style Resolution</td>
+            </tr>
+            <tr>
+                <td><strong data-key="td_lethal">Lethality</strong></td>
+                <td data-key="td_lethal_full">Very High (Injury Tracking)</td>
+                <td data-key="td_lethal_lite">High (Narrative Brutality)</td>
+            </tr>
+            <tr>
+                <td><strong data-key="td_prep">Preparation</strong></td>
+                <td data-key="td_prep_full">Moderate (Toolkit Design)</td>
+                <td data-key="td_prep_lite">Zero-Prep / Pick-up-and-play</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="border-left: 4px solid #b8962e; padding-left: 20px; margin-bottom: 30px;">
+        <h2 style="margin-bottom: 5px;" data-key="sec1_title">I. THE CORE ENGINE: TCCC SYSTEM</h2>
+        <p style="color: #888; font-size: 0.9rem; margin-top: 0;" data-key="sec1_sub">Inside the Saeculum Line | Universal Tactical Toolkit</p>
+    </div>
+
+    <div class="section">
+        <div class="content-block">
+            <div class="launch-date" data-key="launch_2027">EXPECTED 2027</div>
+            <h2 data-key="saeculum_h2">SAECULUM: BLOOD OF AGES</h2>
+            <p data-key="saeculum_p">A genre-agnostic toolkit across all ages of human evolution. Whether you are running primitive survival, a desert raid, or space opera, the mechanics adapt while keeping math consistent.</p>
+            <div class="feature-item"><span class="highlight" data-key="dice_label">SCALABLE DICE:</span> <span data-key="dice_text">Rank 1 (d4) to Rank 5 (d12) resolution.</span></div>
+            <div class="feature-item"><span class="highlight" data-key="intel_label">SYSTEM INTEL:</span> <a href="saeculum-bloodofages.html" style="color: #b8962e; text-decoration: none; border-bottom: 1px solid;" data-key="intel_link">Click cover for mechanical intel.</a></div>
+        </div>
+        <a href="saeculum-bloodofages.html">
+            <img src="saeculum-blood-of-ages-rpg-artwork.jpg" alt="Saeculum Blood of Ages Core TTRPG Artwork - TCCC System" class="book-cover">
+        </a>
+    </div>
+
+    <div class="section" style="border-color: #00f2ff44;">
+        <div class="content-block">
+            <div class="launch-date" style="background:#00f2ff; color:#000;" data-key="launch_2027">EXPECTED 2027</div>
+            <h2 style="color: #00f2ff; border-bottom-color: #00f2ff;" data-key="carne_h2">SAECULUM: CARNEFERREUS</h2>
+            <p data-key="carne_p">The expansion for the Saeculum universe. High-consequence survival in a fractured post-apocalyptic / cyberpunk North America.</p>
+            <div class="feature-item"><span class="highlight" style="color: #00f2ff;" data-key="data_hustle">DATA HUSTLE:</span> <span data-key="data_hustle_text">Gritty "Cracking" mechanics in meat-space.</span></div>
+            <div class="feature-item"><span class="highlight" style="color: #00f2ff;" data-key="neon_intel">NEON INTEL:</span> <a href="carneferreus-details.html" style="color: #00f2ff; text-decoration: none; border-bottom: 1px solid;" data-key="neon_link">Click cover to decode expansion specs.</a></div>
+        </div>
+        <a href="carneferreus-details.html">
+            <img src="saeculum-carneferreus-cover.jpg" alt="Saeculum Carneferreus Expansion Cover - Cyberpunk Post-Apocalyptic RPG" class="book-cover">
+        </a>
+    </div>
+
+    <div style="border-left: 4px solid #4a7c3f; padding-left: 20px; margin-bottom: 30px; margin-top: 80px;">
+        <h2 style="color: #6bab5c; margin-bottom: 5px;" data-key="sec2_title">II. THE TCCC LITE ENGINE: BLACKJACK</h2>
+        <p style="color: #888; font-size: 0.9rem; margin-top: 0;" data-key="sec2_sub">Cinematic Precision | Fast-Filler | Zero-Prep</p>
+    </div>
+
+    <div class="section" style="border-color: #4a7c3f;">
+        <div class="content-block">
+            <div class="launch-date" style="background: #4a7c3f; color: #fff;" data-key="live_now">LIVE NOW</div>
+            <h2 style="color: #6bab5c; border-bottom-color: #4a7c3f;" data-key="lite_h2">TCCC LITE SYSTEM</h2>
+            <p data-key="lite_p">An oversimplified, fast-paced adaptation of the TCCC System. Designed for rapid resolution and high-stakes cinematic action.</p>
+            <div class="feature-item" style="border-left-color: #4a7c3f;">
+                <span class="highlight" style="color: #6bab5c;" data-key="intel_label">SYSTEM INTEL:</span> 
+                <a href="blackjack.html" style="color: #6bab5c; text-decoration: none; border-bottom: 1px solid;" data-key="lite_intel_link">Full system & module details.</a>
             </div>
+            <hr style="border: 0; border-top: 1px solid #333; margin: 20px 0;">
+            <h3 style="color: #6bab5c; text-transform: uppercase;" data-key="saloon_h3">Trouble at the Black Jack Saloon</h3>
+            <p data-key="saloon_p">Experience the grit of the Old West. This all in one game uses unique blackjack-style resolution.</p>
+            <a href="https://www.drivethrurpg.com/en/publisher/33737/martin-lampron" target="_blank" class="btn" style="background: #4a7c3f; color: #fff;" data-key="store_btn">Visit DriveThruRPG Store</a>
+        </div>
+        <a href="blackjack.html">
+            <img src="saloon.jpg" alt="Trouble at the Black Jack Saloon RPG Cover" class="book-cover" style="border-color: #4a7c3f;">
+        </a>
+    </div>
 
-            <div class="tech-box">
-                <h3 data-key="sae_dance_h3">The Combat Dance</h3>
-                <p data-key="sae_dance_p">Initiative is calculated via <strong>Smarts + Rapidity</strong>. Instead of taking turns, combat is a countdown. High initiative operatives act first and can potentially act multiple times before the "Dance" concludes.</p>
+    <div class="section" style="border-color: #b8962e; background: #1a1a00;">
+        <div class="content-block">
+            <div class="launch-date" style="background: #b8962e; color: #000;" data-key="live_now">LIVE NOW</div>
+            <h2 style="color: #b8962e; border-bottom-color: #b8962e;" data-key="hunt_h2">THE HUNT FOR "SMALL" WHESTERFIELD</h2>
+            <p data-key="hunt_p">The first major expansion for <i>Trouble at the Black Jack Saloon</i>. Bilingual (EN/FR) mini-campaign.</p>
+            <a href="https://www.drivethrurpg.com/en/publisher/33737/martin-lampron" target="_blank" class="btn" data-key="acquire_btn">Acquire Expansion</a>
+        </div>
+        <a href="blackjack.html">
+            <img src="small-Whesterfield.jpg" alt="The Hunt for Small Whesterfield RPG Expansion Cover" class="book-cover" style="border-color: #b8962e;">
+        </a>
+    </div>
+
+    <div style="border-left: 4px solid #8b0000; padding-left: 20px; margin-bottom: 30px; margin-top: 80px;">
+        <h2 style="color: #ff4d4d; margin-bottom: 5px;" data-key="sec3_title">III. NARRATIVE ASSETS</h2>
+        <p style="color: #888; font-size: 0.9rem; margin-top: 0;" data-key="sec3_sub">Emergent Stories | Official Session Harrows</p>
+    </div>
+
+    <div class="section" style="border-color: #8b0000; background: #110000;">
+        <div class="content-block">
+            <div class="launch-date" style="background: #8b0000; color: #fff;" data-key="launch_2027">EXPECTED 2027</div>
+            <h2 style="color: #ff4d4d; border-bottom-color: #8b0000;" data-key="chronicle_h2">SAECULUM: CHRONICLE OF BLOOD</h2>
+            <p data-key="chronicle_p">A visceral novelization of the TCCC System in action. Features outcomes generated during official sessions.</p>
+            <div class="feature-item" style="border-left-color: #8b0000;">
+                <span class="highlight" style="color: #ff4d4d;" data-key="selected_intel">SELECTED INTEL:</span>
+            </div>
+            <div class="feature-item" style="border-left-color: #8b0000; margin-left: 20px;">
+                <span class="highlight" style="color: #ff4d4d;" data-key="leo_label">LEO LA CICATRICE:</span> <span data-key="leo_text">A veteran's choice between vanity and survival.</span>
+            </div>
+            <div class="feature-item" style="border-left-color: #8b0000; margin-left: 20px;">
+                <span class="highlight" style="color: #ff4d4d;" data-key="hunger_label">THE WHITE HUNGER:</span> <span data-key="hunger_text">A descent into madness in the frozen Saguenay.</span>
+            </div>
+            <div class="feature-item" style="border-left-color: #8b0000; margin-top: 20px;">
+                <span class="highlight" style="color: #ff4d4d;" data-key="narrative_bypass">NARRATIVE BYPASS:</span> 
+                <a href="chronicle-extract.html" style="color: #ff4d4d; text-decoration: none; border-bottom: 1px solid;" data-key="read_extract">Read "The White Hunger" Extract</a>
             </div>
         </div>
-    </section>
-
-    <section style="margin-top: 50px;">
-        <h2 data-key="sae_bio_h2">Biological Integrity & Identity</h2>
-        <div class="grid">
-            <div class="tech-box">
-                <h3 data-key="sae_injury_h3">Injury Boxes</h3>
-                <p data-key="sae_injury_p">Traditional "Hit Points" do not exist. Characters track <strong>Stun, Injury, Severe Injury, and Lethal Wounds</strong>. Damage applies direct malus penalties to your actions, representing pain and shock.</p>
-            </div>
-            <div class="tech-box">
-                <h3 data-key="sae_facade_h3">Facade & Inner Self</h3>
-                <p data-key="sae_facade_p">Balance your public reputation against your true ethics. This dual-layer character system provides unique perks but introduces mandatory liabilities that can compromise a mission.</p>
-            </div>
+        <div class="book-cover" style="display: flex; align-items: center; justify-content: center; background: #0a0a0a; color: #8b0000; border: 2px dashed #8b0000; height: 350px; min-width: 250px;">
+            <p style="text-align: center; padding: 20px; font-weight: bold;" data-key="cover_pending">COVER ART PENDING<br>[REDACTED]</p>
         </div>
-    </section>
+    </div>
 
-    <section style="margin-top: 50px;">
-        <h2 data-key="sae_mod_h2">Modular Expansion Systems</h2>
-        <p data-key="sae_mod_p">The Saeculum universe is designed to be augmented with specialized modules depending on your setting's era and complexity.</p>
-        
-        <div class="grid">
-            <div class="tech-box">
-                <h3 data-key="sae_arcane_h3">The Arcane & Ritual</h3>
-                <p data-key="sae_arcane_p">Four distinct subsystems: <span class="highlight">Ritual, Sorcery, Summoning, and High Magic</span>. Utilizing the Magic (MAG) attribute, casters must manage "Drain"—physical damage taken as the cost of manipulating reality.</p>
+    <div class="contact-section">
+        <h2 style="margin-top:0;" data-key="field_title">FIELD REPORT</h2>
+        <p style="max-width: 600px; margin: 0 auto 20px auto; color: #b8962e; font-size: 1rem; border: 1px solid #333; padding: 15px; background: #151515;" data-key="field_p">
+            If you have any questions, comments or if you are interested in playtesting either the <span class="highlight">TCCC Lite</span> or the <span class="highlight">Full TCCC engine</span>, please fill out the field report below. I am available for online play, as well as in-person sessions if you are near the <span class="highlight">Drummondville</span> area.
+        </p>
+        <form action="https://formspree.io/f/mreyrnpl" method="POST" style="max-width: 600px; margin: 25px auto; text-align: left;">
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <input type="text" name="name" placeholder="[OPERATIVE NAME]" required class="tccc-input" style="flex: 1;">
+                <input type="email" name="email" placeholder="[RETURN EMAIL]" required class="tccc-input" style="flex: 1;">
             </div>
+            <textarea name="message" placeholder="[SITUATION REPORT]" rows="5" required class="tccc-input" style="resize: vertical;"></textarea>
+            <button type="submit" class="btn" style="width: 100%; cursor: pointer;" data-key="send_btn">SEND SIGNAL</button>
+        </form>
+    </div>
 
-            <div class="tech-box">
-                <h3 data-key="sae_trans_h3">Transhumanism</h3>
-                <p data-key="sae_trans_p">Rules for cybernetic implants and biological enhancements. While these grant superior performance, they cost <span class="highlight">Nature</span>. Losing too much Nature leads to robotic detachment or severe mental derangement.</p>
-            </div>
+    <div class="social-section">
+        <a href="https://www.facebook.com/SaeculumBloodOfAges?locale=fr_CA" target="_blank" class="social-link">Facebook</a>
+        <a href="https://discord.gg/3a33jT5Q6F" target="_blank" class="social-link">Discord</a>
+    </div>
 
-            <div class="tech-box">
-                <h3 data-key="sae_mech_h3">Vehicles & Mechs</h3>
-                <p data-key="sae_mech_p">Comprehensive rules for high-speed pursuits and vehicular dogfights. Includes a deep customization suite for Mechs, allowing players to build specialized frames using Bonus Points.</p>
-            </div>
-
-            <div class="tech-box">
-                <h3 data-key="sae_mass_h3">Mass Conflict</h3>
-                <p data-key="sae_mass_p">Resolve large-scale battles and sieges without losing the narrative. Uses abstract <span class="highlight">Morale Points</span> and Leadership checks to determine the fate of armies and fortresses.</p>
-            </div>
-        </div>
-    </section>
 </div>
 
-<footer data-key="sae_footer">
-    &copy; 2026 TCCC SYSTEM | ENCRYPTED DATA CHANNEL
+<footer>
+    &copy; 2026 TCCC SYSTEM | <span data-key="footer_created">CREATED BY MARTIN LAMPRON</span> <br>
+    <span data-key="footer_vet">CANADIAN ARMED FORCES VETERAN DESIGNED.</span>
 </footer>
 
 <script>
     const langBtn = document.getElementById('lang-btn');
-    
     async function loadLanguage(lang) {
         try {
-            const response = await fetch('lang.json');
+            const response = await fetch('./lang.json');
             const data = await response.json();
-            
             document.querySelectorAll('[data-key]').forEach(el => {
                 const key = el.getAttribute('data-key');
-                if (data[lang][key]) {
-                    el.innerHTML = data[lang][key];
-                }
+                if (data[lang][key]) { el.innerHTML = data[lang][key]; }
             });
-
             langBtn.textContent = lang === 'en' ? 'Français' : 'English';
             localStorage.setItem('preferredLang', lang);
-        } catch (e) {
-            console.error("Language file not found or invalid", e);
-        }
+        } catch (e) { console.error("Language error", e); }
     }
 
     langBtn.addEventListener('click', () => {
         const nextLang = localStorage.getItem('preferredLang') === 'fr' ? 'en' : 'fr';
         loadLanguage(nextLang);
+        if (typeof gtag === 'function') {
+            gtag('event', 'change_language', { 'language_selected': nextLang });
+        }
     });
 
     const saved = localStorage.getItem('preferredLang') || 'en';
