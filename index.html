@@ -60,7 +60,6 @@
         .social-link:hover { border-bottom: 1px solid #b8962e; color: #fff; }
         footer { text-align: center; padding: 40px 20px; font-size: 0.8rem; color: #555; border-top: 1px solid #1a1a1a; }
 
-        /* ADDED: Language Button Style */
         .lang-switcher {
             position: fixed;
             top: 20px;
@@ -144,10 +143,10 @@
             <h2 data-key="saeculum_h2">SAECULUM: BLOOD OF AGES</h2>
             <p data-key="saeculum_p">A genre-agnostic toolkit across all ages of human evolution. Whether you are running primitive survival, a desert raid, or space opera, the mechanics adapt while keeping math consistent.</p>
             <div class="feature-item"><span class="highlight" data-key="dice_label">SCALABLE DICE:</span> <span data-key="dice_text">Rank 1 (d4) to Rank 5 (d12) resolution.</span></div>
-            <div class="feature-item"><span class="highlight" data-key="intel_label">SYSTEM INTEL:</span> <a href="saeculum-details.html" style="color: #b8962e; text-decoration: none; border-bottom: 1px solid;" data-key="intel_link">Click cover for mechanical intel.</a></div>
+            <div class="feature-item"><span class="highlight" data-key="intel_label">SYSTEM INTEL:</span> <a href="saeculum-bloodofages.html" style="color: #b8962e; text-decoration: none; border-bottom: 1px solid;" data-key="intel_link">Click cover for mechanical intel.</a></div>
         </div>
-        <a href="saeculum-details.html">
-            <img src="bloodofages.jpg" alt="Saeculum Core Cover" class="book-cover">
+        <a href="saeculum-bloodofages.html">
+            <img src="saeculum-blood-of-ages-rpg-artwork.jpg" alt="Saeculum Core Cover" class="book-cover">
         </a>
     </div>
 
@@ -160,7 +159,7 @@
             <div class="feature-item"><span class="highlight" style="color: #00f2ff;" data-key="neon_intel">NEON INTEL:</span> <a href="carneferreus-details.html" style="color: #00f2ff; text-decoration: none; border-bottom: 1px solid;" data-key="neon_link">Click cover to decode expansion specs.</a></div>
         </div>
         <a href="carneferreus-details.html">
-            <img src="carneferraus.jpg" alt="Carneferreus Expansion Cover" class="book-cover">
+            <img src="saeculum-carneferreus-cover.jpg" alt="Carneferreus Expansion Cover" class="book-cover">
         </a>
     </div>
 
@@ -293,7 +292,6 @@
         loadLanguage(nextLang);
     });
 
-    // Run on startup
     const saved = localStorage.getItem('preferredLang') || 'en';
     if (saved === 'fr') loadLanguage('fr');
 </script>
