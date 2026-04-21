@@ -128,9 +128,12 @@
             <h2 data-key="saeculum_h2">SAECULUM: BLOOD OF AGES</h2>
             <p data-key="saeculum_p">A genre-agnostic toolkit across all ages of human evolution. Whether you are running primitive survival, a desert raid, or space opera, the mechanics adapt while keeping math consistent.</p>
             <div class="feature-item"><span class="highlight" data-key="dice_label">SCALABLE DICE:</span> <span data-key="dice_text">Rank 1 (d4) to Rank 5 (d12) resolution.</span></div>
-            <div class="feature-item"><span class="highlight" data-key="intel_label">SYSTEM INTEL:</span> <a href="saeculum-bloodofages.html" style="color: #b8962e; text-decoration: none; border-bottom: 1px solid;" data-key="intel_link">Click cover for mechanical intel.</a></div>
+            <div class="feature-item">
+                <span class="highlight" data-key="intel_label">SYSTEM INTEL:</span> 
+                <a href="./saeculum-bloodofages.html" style="color: #b8962e; text-decoration: none; border-bottom: 1px solid;" data-key="intel_link">Click cover for mechanical intel.</a>
+            </div>
         </div>
-        <a href="saeculum-bloodofages.html">
+        <a href="./saeculum-bloodofages.html">
             <img src="saeculum-blood-of-ages-rpg-artwork.jpg" alt="Saeculum Blood of Ages Core TTRPG Artwork - TCCC System" class="book-cover">
         </a>
     </div>
@@ -141,9 +144,12 @@
             <h2 style="color: #00f2ff; border-bottom-color: #00f2ff;" data-key="carne_h2">SAECULUM: CARNEFERREUS</h2>
             <p data-key="carne_p">The expansion for the Saeculum universe. High-consequence survival in a fractured post-apocalyptic / cyberpunk North America.</p>
             <div class="feature-item"><span class="highlight" style="color: #00f2ff;" data-key="data_hustle">DATA HUSTLE:</span> <span data-key="data_hustle_text">Gritty "Cracking" mechanics in meat-space.</span></div>
-            <div class="feature-item"><span class="highlight" style="color: #00f2ff;" data-key="neon_intel">NEON INTEL:</span> <a href="carneferreus-details.html" style="color: #00f2ff; text-decoration: none; border-bottom: 1px solid;" data-key="neon_link">Click cover to decode expansion specs.</a></div>
+            <div class="feature-item">
+                <span class="highlight" style="color: #00f2ff;" data-key="neon_intel">NEON INTEL:</span> 
+                <a href="./carneferreus-details.html" style="color: #00f2ff; text-decoration: none; border-bottom: 1px solid;" data-key="neon_link">Click cover to decode expansion specs.</a>
+            </div>
         </div>
-        <a href="carneferreus-details.html">
+        <a href="./carneferreus-details.html">
             <img src="saeculum-carneferreus-cover.jpg" alt="Saeculum Carneferreus Expansion Cover - Cyberpunk Post-Apocalyptic RPG" class="book-cover">
         </a>
     </div>
@@ -160,14 +166,14 @@
             <p data-key="lite_p">An oversimplified, fast-paced adaptation of the TCCC System. Designed for rapid resolution and high-stakes cinematic action.</p>
             <div class="feature-item" style="border-left-color: #4a7c3f;">
                 <span class="highlight" style="color: #6bab5c;" data-key="intel_label">SYSTEM INTEL:</span> 
-                <a href="blackjack.html" style="color: #6bab5c; text-decoration: none; border-bottom: 1px solid;" data-key="lite_intel_link">Full system & module details.</a>
+                <a href="./blackjack.html" style="color: #6bab5c; text-decoration: none; border-bottom: 1px solid;" data-key="lite_intel_link">Full system & module details.</a>
             </div>
             <hr style="border: 0; border-top: 1px solid #333; margin: 20px 0;">
             <h3 style="color: #6bab5c; text-transform: uppercase;" data-key="saloon_h3">Trouble at the Black Jack Saloon</h3>
             <p data-key="saloon_p">Experience the grit of the Old West. This all in one game uses unique blackjack-style resolution.</p>
             <a href="https://www.drivethrurpg.com/en/publisher/33737/martin-lampron" target="_blank" class="btn" style="background: #4a7c3f; color: #fff;" data-key="store_btn">Visit DriveThruRPG Store</a>
         </div>
-        <a href="blackjack.html">
+        <a href="./blackjack.html">
             <img src="saloon.jpg" alt="Trouble at the Black Jack Saloon RPG Cover" class="book-cover" style="border-color: #4a7c3f;">
         </a>
     </div>
@@ -179,7 +185,7 @@
             <p data-key="hunt_p">The first major expansion for <i>Trouble at the Black Jack Saloon</i>. Bilingual (EN/FR) mini-campaign.</p>
             <a href="https://www.drivethrurpg.com/en/publisher/33737/martin-lampron" target="_blank" class="btn" data-key="acquire_btn">Acquire Expansion</a>
         </div>
-        <a href="blackjack.html">
+        <a href="./blackjack.html">
             <img src="small-Whesterfield.jpg" alt="The Hunt for Small Whesterfield RPG Expansion Cover" class="book-cover" style="border-color: #b8962e;">
         </a>
     </div>
@@ -205,7 +211,7 @@
             </div>
             <div class="feature-item" style="border-left-color: #8b0000; margin-top: 20px;">
                 <span class="highlight" style="color: #ff4d4d;" data-key="narrative_bypass">NARRATIVE BYPASS:</span> 
-                <a href="chronicle-extract.html" style="color: #ff4d4d; text-decoration: none; border-bottom: 1px solid;" data-key="read_extract">Read "The White Hunger" Extract</a>
+                <a href="./chronicle-extract.html" style="color: #ff4d4d; text-decoration: none; border-bottom: 1px solid;" data-key="read_extract">Read "The White Hunger" Extract</a>
             </div>
         </div>
         <div class="book-cover" style="display: flex; align-items: center; justify-content: center; background: #0a0a0a; color: #8b0000; border: 2px dashed #8b0000; height: 350px; min-width: 250px;">
@@ -248,7 +254,10 @@
             const data = await response.json();
             document.querySelectorAll('[data-key]').forEach(el => {
                 const key = el.getAttribute('data-key');
-                if (data[lang][key]) { el.innerHTML = data[lang][key]; }
+                if (data[lang][key]) { 
+                    // Update content while preserving the link's structure
+                    el.innerHTML = data[lang][key]; 
+                }
             });
             langBtn.textContent = lang === 'en' ? 'Français' : 'English';
             localStorage.setItem('preferredLang', lang);
