@@ -25,8 +25,7 @@
     <title>TCCC System | Realistic RPG Toolkit</title>
 
     <meta name="title" content="TCCC System | Tactical Combat & Creative Cinematic RPG">
-    <meta name="description" content="TCCC System: All In One realistic RPG toolkit / Un outil tout en un de JDR réaliste par Martin Lampron. Scalable d4-d12 resolution, tactical combat, système de jeu de rôle tactique.">
-    <meta name="keywords" content="TTRPG, JDR, jeu de rôle, tactique, Martin Lampron, TCCC System, TCCC Lite, Québec, Drummondville, Modular TTRPG, realistic RPG, Saeculum Blood of Ages, Trouble at the BlackJack Saloon, Hunt for Small Whesterfield, Carneferreus, Saeculum Chronicle of Blood">
+    <meta name="description" content="A realistic RPG toolkit by Martin Lampron. Featuring scalable d4-d12 resolution and injury-based combat.">
     <meta name="author" content="Martin Lampron">
 
     <style>
@@ -47,6 +46,7 @@
         .btn { display: inline-block; padding: 14px 30px; background: #b8962e; color: #000; text-decoration: none; font-weight: bold; border-radius: 2px; transition: 0.3s; margin-top: 20px; text-transform: uppercase; border: none; text-align: center; cursor: pointer; }
         .btn:hover { background: #fff; color: #000; }
         
+        /* Engine Comparison Table Styles */
         .comparison-table { width: 100%; border-collapse: collapse; margin-bottom: 50px; background: #050505; border: 1px solid #333; font-size: 0.85rem; }
         .comparison-table th { background: #1a1a1a; color: #b8962e; padding: 15px; text-align: left; border: 1px solid #333; text-transform: uppercase; }
         .comparison-table td { padding: 12px 15px; border: 1px solid #222; }
@@ -60,8 +60,24 @@
         .social-link:hover { border-bottom: 1px solid #b8962e; color: #fff; }
         footer { text-align: center; padding: 40px 20px; font-size: 0.8rem; color: #555; border-top: 1px solid #1a1a1a; }
 
-        .lang-switcher { position: fixed; top: 20px; right: 20px; z-index: 1000; }
-        .lang-btn { background: #b8962e; color: #000; border: none; padding: 8px 16px; font-family: 'Courier New', monospace; font-weight: bold; text-transform: uppercase; cursor: pointer; border-radius: 2px; }
+        /* ADDED: Language Button Style */
+        .lang-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .lang-btn {
+            background: #b8962e;
+            color: #000;
+            border: none;
+            padding: 8px 16px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 2px;
+        }
 
         @media (max-width: 768px) { 
             body { font-size: 18px; } 
@@ -128,13 +144,10 @@
             <h2 data-key="saeculum_h2">SAECULUM: BLOOD OF AGES</h2>
             <p data-key="saeculum_p">A genre-agnostic toolkit across all ages of human evolution. Whether you are running primitive survival, a desert raid, or space opera, the mechanics adapt while keeping math consistent.</p>
             <div class="feature-item"><span class="highlight" data-key="dice_label">SCALABLE DICE:</span> <span data-key="dice_text">Rank 1 (d4) to Rank 5 (d12) resolution.</span></div>
-            <div class="feature-item">
-                <span class="highlight" data-key="intel_label">SYSTEM INTEL:</span> 
-                <a href="./saeculum-bloodofages.html" style="color: #b8962e; text-decoration: none; border-bottom: 1px solid;" data-key="intel_link">Click cover for mechanical intel.</a>
-            </div>
+            <div class="feature-item"><span class="highlight" data-key="intel_label">SYSTEM INTEL:</span> <a href="saeculum-details.html" style="color: #b8962e; text-decoration: none; border-bottom: 1px solid;" data-key="intel_link">Click cover for mechanical intel.</a></div>
         </div>
-        <a href="./saeculum-bloodofages.html">
-            <img src="saeculum-blood-of-ages-rpg-artwork.jpg" alt="Saeculum Blood of Ages Core TTRPG Artwork - TCCC System" class="book-cover">
+        <a href="saeculum-details.html">
+            <img src="bloodofages.jpg" alt="Saeculum Core Cover" class="book-cover">
         </a>
     </div>
 
@@ -144,13 +157,10 @@
             <h2 style="color: #00f2ff; border-bottom-color: #00f2ff;" data-key="carne_h2">SAECULUM: CARNEFERREUS</h2>
             <p data-key="carne_p">The expansion for the Saeculum universe. High-consequence survival in a fractured post-apocalyptic / cyberpunk North America.</p>
             <div class="feature-item"><span class="highlight" style="color: #00f2ff;" data-key="data_hustle">DATA HUSTLE:</span> <span data-key="data_hustle_text">Gritty "Cracking" mechanics in meat-space.</span></div>
-            <div class="feature-item">
-                <span class="highlight" style="color: #00f2ff;" data-key="neon_intel">NEON INTEL:</span> 
-                <a href="./carneferreus-details.html" style="color: #00f2ff; text-decoration: none; border-bottom: 1px solid;" data-key="neon_link">Click cover to decode expansion specs.</a>
-            </div>
+            <div class="feature-item"><span class="highlight" style="color: #00f2ff;" data-key="neon_intel">NEON INTEL:</span> <a href="carneferreus-details.html" style="color: #00f2ff; text-decoration: none; border-bottom: 1px solid;" data-key="neon_link">Click cover to decode expansion specs.</a></div>
         </div>
-        <a href="./carneferreus-details.html">
-            <img src="saeculum-carneferreus-cover.jpg" alt="Saeculum Carneferreus Expansion Cover - Cyberpunk Post-Apocalyptic RPG" class="book-cover">
+        <a href="carneferreus-details.html">
+            <img src="carneferraus.jpg" alt="Carneferreus Expansion Cover" class="book-cover">
         </a>
     </div>
 
@@ -164,17 +174,22 @@
             <div class="launch-date" style="background: #4a7c3f; color: #fff;" data-key="live_now">LIVE NOW</div>
             <h2 style="color: #6bab5c; border-bottom-color: #4a7c3f;" data-key="lite_h2">TCCC LITE SYSTEM</h2>
             <p data-key="lite_p">An oversimplified, fast-paced adaptation of the TCCC System. Designed for rapid resolution and high-stakes cinematic action.</p>
+            
             <div class="feature-item" style="border-left-color: #4a7c3f;">
                 <span class="highlight" style="color: #6bab5c;" data-key="intel_label">SYSTEM INTEL:</span> 
-                <a href="./blackjack.html" style="color: #6bab5c; text-decoration: none; border-bottom: 1px solid;" data-key="lite_intel_link">Full system & module details.</a>
+                <a href="blackjack.html" style="color: #6bab5c; text-decoration: none; border-bottom: 1px solid;" data-key="lite_intel_link">Full system & module details.</a>
             </div>
+
             <hr style="border: 0; border-top: 1px solid #333; margin: 20px 0;">
+            
             <h3 style="color: #6bab5c; text-transform: uppercase;" data-key="saloon_h3">Trouble at the Black Jack Saloon</h3>
             <p data-key="saloon_p">Experience the grit of the Old West. This all in one game uses unique blackjack-style resolution.</p>
+            
             <a href="https://www.drivethrurpg.com/en/publisher/33737/martin-lampron" target="_blank" class="btn" style="background: #4a7c3f; color: #fff;" data-key="store_btn">Visit DriveThruRPG Store</a>
         </div>
-        <a href="./blackjack.html">
-            <img src="saloon.jpg" alt="Trouble at the Black Jack Saloon RPG Cover" class="book-cover" style="border-color: #4a7c3f;">
+        
+        <a href="blackjack.html">
+            <img src="saloon.jpg" alt="Trouble at the Black Jack Saloon Cover" class="book-cover" style="border-color: #4a7c3f;">
         </a>
     </div>
 
@@ -185,8 +200,9 @@
             <p data-key="hunt_p">The first major expansion for <i>Trouble at the Black Jack Saloon</i>. Bilingual (EN/FR) mini-campaign.</p>
             <a href="https://www.drivethrurpg.com/en/publisher/33737/martin-lampron" target="_blank" class="btn" data-key="acquire_btn">Acquire Expansion</a>
         </div>
-        <a href="./blackjack.html">
-            <img src="small-Whesterfield.jpg" alt="The Hunt for Small Whesterfield RPG Expansion Cover" class="book-cover" style="border-color: #b8962e;">
+        
+        <a href="blackjack.html">
+            <img src="small-Whesterfield.jpg" alt="The Hunt for Small Whesterfield Cover" class="book-cover" style="border-color: #b8962e;">
         </a>
     </div>
 
@@ -200,6 +216,7 @@
             <div class="launch-date" style="background: #8b0000; color: #fff;" data-key="launch_2027">EXPECTED 2027</div>
             <h2 style="color: #ff4d4d; border-bottom-color: #8b0000;" data-key="chronicle_h2">SAECULUM: CHRONICLE OF BLOOD</h2>
             <p data-key="chronicle_p">A visceral novelization of the TCCC System in action. Features outcomes generated during official sessions.</p>
+            
             <div class="feature-item" style="border-left-color: #8b0000;">
                 <span class="highlight" style="color: #ff4d4d;" data-key="selected_intel">SELECTED INTEL:</span>
             </div>
@@ -209,9 +226,10 @@
             <div class="feature-item" style="border-left-color: #8b0000; margin-left: 20px;">
                 <span class="highlight" style="color: #ff4d4d;" data-key="hunger_label">THE WHITE HUNGER:</span> <span data-key="hunger_text">A descent into madness in the frozen Saguenay.</span>
             </div>
+
             <div class="feature-item" style="border-left-color: #8b0000; margin-top: 20px;">
                 <span class="highlight" style="color: #ff4d4d;" data-key="narrative_bypass">NARRATIVE BYPASS:</span> 
-                <a href="./chronicle-extract.html" style="color: #ff4d4d; text-decoration: none; border-bottom: 1px solid;" data-key="read_extract">Read "The White Hunger" Extract</a>
+                <a href="chronicle-extract.html" style="color: #ff4d4d; text-decoration: none; border-bottom: 1px solid;" data-key="read_extract">Read "The White Hunger" Extract</a>
             </div>
         </div>
         <div class="book-cover" style="display: flex; align-items: center; justify-content: center; background: #0a0a0a; color: #8b0000; border: 2px dashed #8b0000; height: 350px; min-width: 250px;">
@@ -221,9 +239,11 @@
 
     <div class="contact-section">
         <h2 style="margin-top:0;" data-key="field_title">FIELD REPORT</h2>
+
         <p style="max-width: 600px; margin: 0 auto 20px auto; color: #b8962e; font-size: 1rem; border: 1px solid #333; padding: 15px; background: #151515;" data-key="field_p">
             If you have any questions, comments or if you are interested in playtesting either the <span class="highlight">TCCC Lite</span> or the <span class="highlight">Full TCCC engine</span>, please fill out the field report below. I am available for online play, as well as in-person sessions if you are near the <span class="highlight">Drummondville</span> area.
         </p>
+
         <form action="https://formspree.io/f/mreyrnpl" method="POST" style="max-width: 600px; margin: 25px auto; text-align: left;">
             <div style="display: flex; gap: 10px; flex-wrap: wrap;">
                 <input type="text" name="name" placeholder="[OPERATIVE NAME]" required class="tccc-input" style="flex: 1;">
@@ -248,30 +268,32 @@
 
 <script>
     const langBtn = document.getElementById('lang-btn');
+    
     async function loadLanguage(lang) {
         try {
-            const response = await fetch('./lang.json');
+            const response = await fetch('lang.json');
             const data = await response.json();
+            
             document.querySelectorAll('[data-key]').forEach(el => {
                 const key = el.getAttribute('data-key');
-                if (data[lang][key]) { 
-                    // Update content while preserving the link's structure
-                    el.innerHTML = data[lang][key]; 
+                if (data[lang][key]) {
+                    el.innerHTML = data[lang][key];
                 }
             });
+
             langBtn.textContent = lang === 'en' ? 'Français' : 'English';
             localStorage.setItem('preferredLang', lang);
-        } catch (e) { console.error("Language error", e); }
+        } catch (e) {
+            console.error("Language file not found or invalid", e);
+        }
     }
 
     langBtn.addEventListener('click', () => {
         const nextLang = localStorage.getItem('preferredLang') === 'fr' ? 'en' : 'fr';
         loadLanguage(nextLang);
-        if (typeof gtag === 'function') {
-            gtag('event', 'change_language', { 'language_selected': nextLang });
-        }
     });
 
+    // Run on startup
     const saved = localStorage.getItem('preferredLang') || 'en';
     if (saved === 'fr') loadLanguage('fr');
 </script>
