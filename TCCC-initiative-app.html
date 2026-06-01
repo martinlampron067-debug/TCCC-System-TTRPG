@@ -2,309 +2,203 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Saeculum: Companion Active Dance Tracker</title>
-
-    <meta name="robots" content="noindex, nofollow">
-
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="Saeculum Tracker">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-    <link rel="apple-touch-icon" href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEBLAEsAAD/4QKyRXhpZgAATU0AKgAAAAgAAodpAAQAAAABAAABMuocAAcAAAEMAAAAJgAAAAAc6gAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWQAwACAAAAFAAAAoCQBAACAAAAFAAAApSSkQACAAAAAzAwAACSkgACAAAAAzAwAADqHAAHAAABDAAAAXQAAAAAHOoAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADIwMjY6MDM6MTggMjE6MDA6MzYAMjAyNjowMzoxOCAyMTowMDozNgAAAP/hAqxodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvADw/eHBhY2tldCBiZWdpbj0n77u/JyBpZD0nVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkJz8+DQo8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIj48cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPjxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSJ1dWlkOmZhZjViZGQ1LWJhM2QtMTFkYS1hZDMxLWQzM2Q3NTE4MmYxYiIgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iPjxleGlmOkRhdGVUaW1lT3JpZ2luYWw+MjAyNi0wMy0xOFQyMTowMDozNjwvZXhpZjpEYXRlVGltZU9yaWdpbmFsPjwvcmRmOkRlc2NyaXB0aW9uPjwvcmRmOlJERiB4bWxudetp">
-    <link rel="icon" type="image/jpeg" href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEBLAEsAAD/4QKyRXhpZgAATU0AKgAAAAgAAodpAAQAAAABAAABMuocAAcAAAEMAAAAJgAAAAAc6gAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWQAwACAAAAFAAAAoCQBAACAAAAFAAAApSSkQACAAAAAzAwAACSkgACAAAAAzAwAADqHAAHAAABDAAAAXQAAAAAHOoAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADIwMjY6MDM6MTggMjE6MDA6MzYAMjAyNjowMzoxOCAyMTowMDozNgAAAP/hAqxodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvADw/eHBhY2tldCBiZWdpbj0n77u/JyBpZD0nVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkJz8+DQo8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIj48cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPjxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSJ1dWlkOmZhZjViZGQ1LWJhM2QtMTFkYS1hZDMxLWQzM2Q3NTE4MmYxYiIgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iPjxleGlmOkRhdGVUaW1lT3JpZ2luYWw+MjAyNi0wMy0xOFQyMTowMDozNjwvZXhpZjpEYXRlVGltZU9yaWdpbmFsPjwvcmRmOkRlc2NyaXB0aW9uPjwvcmRmOlJERiB4bWxudetp">
-
-    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIlNhZWN1bHVtIFRyYWNrZXIiLAogICJzaG9ydF9uYW1lIjogIlNhZWN1bHVtIgp9">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saeculum: Persistent Initiative Tracker</title>
     <style>
-        :root {
-            --bg-main: #0d0d0e;
-            --bg-panel: #16171a;
-            --bg-input: #202226;
-            --border-color: #2d3138;
-            --accent-blood: #9c1c1c;
-            --accent-blood-hover: #bd2626;
-            --text-gold: #e5c158;
-            --text-dim: #8e95a0;
-            --text-light: #f0f2f5;
-        }
-
         body {
-            font-family: 'Cinzel', 'Segoe UI', Helvetica, Arial, sans-serif;
-            background-color: var(--bg-main);
-            color: var(--text-light);
-            padding: 15px;
-            max-width: 500px;
-            margin: 0 auto;
-            letter-spacing: 0.03em;
-            -webkit-user-select: none;
-            user-select: none;
-        }
-
-        .app-container {
-            background-color: var(--bg-panel);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
             padding: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
-            margin-top: env(safe-area-inset-top, 0px);
+            max-width: 650px;
+            margin: 0 auto;
         }
-
-        h1 {
-            font-size: 22px;
-            text-transform: uppercase;
+        h1, h2, h3 {
             text-align: center;
-            color: var(--text-light);
-            margin: 0 0 4px 0;
-            font-weight: 700;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            color: #ff4d4d;
+            margin-bottom: 5px;
         }
-
-        h2 {
-            font-size: 13px;
-            text-transform: uppercase;
-            text-align: center;
-            color: var(--accent-blood);
-            margin: 0 0 20px 0;
-            font-weight: 600;
-            letter-spacing: 0.15em;
-        }
-
-        h3 { 
-            color: var(--text-gold); 
-            font-size: 14px;
-            text-transform: uppercase;
-            margin: 25px 0 12px 0; 
-            letter-spacing: 0.08em;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .input-group {
-            display: flex;
-            gap: 8px;
-            background: var(--bg-input);
-            padding: 4px;
+        h3 { color: #aaa; margin-top: 20px; border-bottom: 1px solid #444; padding-bottom: 5px;}
+        .section {
+            background-color: #2a2a2a;
+            padding: 15px;
             border-radius: 8px;
-            border: 1px solid var(--border-color);
-        }
-
-        input {
-            background-color: transparent;
-            color: var(--text-light);
-            border: none;
-            padding: 10px 12px;
-            font-size: 14px;
-            outline: none;
-            width: 100%;
-            -webkit-user-select: text;
-            user-select: text;
-        }
-
-        input::placeholder {
-            color: #535963;
-        }
-
-        input[type="number"] { 
-            width: 65px; 
-            text-align: center;
-            border-left: 1px solid var(--border-color);
-        }
-
-        button {
-            background-color: var(--accent-blood);
-            color: var(--text-light);
-            border: none;
-            padding: 10px 16px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
-            transition: all 0.2s ease;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-        }
-
-        button:hover { 
-            background-color: var(--accent-blood-hover);
-            transform: translateY(-1px);
-        }
-
-        button:active {
-            transform: translateY(1px);
-        }
-
-        button.secondary { 
-            background-color: #24262b; 
-            border: 1px solid var(--border-color);
-            color: var(--text-dim);
-        }
-        button.secondary:hover { 
-            background-color: #2d3036; 
-            color: var(--text-light);
-        }
-
-        button.delete-btn { 
-            background-color: #1a1b1e; 
-            border: 1px solid #3d1414;
-            color: #ff5959; 
-            padding: 8px 12px;
-        }
-        button.delete-btn:hover { 
-            background-color: #3d1414; 
-        }
-
-        button.delay-btn {
-            background-color: transparent;
-            border: 1px solid var(--text-gold);
-            color: var(--text-gold);
-            padding: 6px 12px;
-            font-size: 11px;
-            border-radius: 6px;
-        }
-        button.delay-btn:hover {
-            background: rgba(229, 193, 88, 0.1);
-        }
-
-        .controls {
-            display: grid;
-            grid-template-columns: auto 1fr auto;
-            align-items: center;
-            background-color: var(--bg-input);
-            padding: 8px;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
+            border: 1px solid #444;
             margin-bottom: 20px;
         }
-
-        .current-turn-display {
-            text-align: center;
-            font-size: 11px;
-            text-transform: uppercase;
-            color: var(--text-dim);
+        .inline-form {
+            display: flex;
+            gap: 10px;
+        }
+        input, select {
+            background-color: #333;
+            color: #fff;
+            border: 1px solid #555;
+            padding: 8px;
+            border-radius: 4px;
+        }
+        input[type="text"] { flex: 2; }
+        input[type="number"] { width: 80px; }
+        button {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
             font-weight: bold;
-            letter-spacing: 0.05em;
         }
-
-        .current-turn-display span {
-            display: block;
-            font-size: 28px;
-            color: var(--text-gold);
-            font-weight: 800;
-            margin-top: 2px;
-            text-shadow: 0 0 10px rgba(229, 193, 88, 0.2);
+        button:hover { background-color: #cc0000; }
+        button.secondary { background-color: #555; }
+        button.secondary:hover { background-color: #333; }
+        button.delete-btn { background-color: #990000; padding: 4px 8px; font-size: 12px; }
+        button.delete-btn:hover { background-color: #cc0000; }
+        
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #222;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
         }
-
+        .current-turn-display {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffeb3b;
+        }
         .turn-list, .roster-list {
             display: flex;
             flex-direction: column;
             gap: 8px;
         }
-
         .turn-row, .roster-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #1a1b1f;
-            border: 1px solid var(--border-color);
-            padding: 12px 16px;
-            border-radius: 10px;
-            transition: all 0.2s ease;
-        }
-
-        .turn-row { border-left: 4px solid #3a3f47; }
-        
-        .turn-row.active {
-            background: linear-gradient(90deg, #1d1b15 0%, #16171a 100%);
-            border-left-color: var(--text-gold);
-            border-top: 1px solid rgba(229,193,88,0.15);
-            border-right: 1px solid rgba(229,193,88,0.15);
-            border-bottom: 1px solid rgba(229,193,88,0.15);
-            box-shadow: inset 3px 0 10px rgba(229, 193, 88, 0.05);
-        }
-
-        .turn-row.passed { 
-            opacity: 0.25; 
-            filter: grayscale(50%);
-        }
-
-        .name { 
-            font-weight: 600; 
-            font-size: 15px; 
-            color: var(--text-light);
-        }
-        
-        .turn-row.passed .name {
-            font-weight: 400;
-        }
-
-        .number {
-            font-size: 12px;
-            color: var(--text-dim);
-            background-color: var(--bg-input);
-            border: 1px solid var(--border-color);
-            padding: 4px 10px;
+            background-color: #2d2d2d;
+            padding: 10px 15px;
             border-radius: 6px;
-            font-weight: 700;
-            text-transform: uppercase;
+        }
+        .turn-row { border-left: 5px solid #555; }
+        .turn-row.active {
+            background-color: #3d3d29;
+            border-left-color: #ffeb3b;
+            box-shadow: 0 0 10px rgba(255, 235, 59, 0.2);
+        }
+        .turn-row.passed { opacity: 0.4; background-color: #222; }
+        .name { font-weight: bold; font-size: 18px; }
+        .number {
+            font-size: 18px;
+            background-color: #444;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .roster-actions { display: flex; gap: 10px; align-items: center; }
+        
+        .delay-btn {
+            background-color: #ffeb3b;
+            color: #000;
+            padding: 6px 12px;
+            font-size: 13px;
+        }
+        .delay-btn:hover {
+            background-color: #fbc02d;
         }
 
-        .turn-row.active .number {
-            color: var(--text-gold);
-            border-color: rgba(229,193,88,0.3);
-            background: #24221a;
+        /* Sub-layout elements for the complex virtual roller controls */
+        .dice-roller-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            align-items: flex-end;
+            background-color: #222;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #444;
         }
-
-        .roster-actions { 
-            display: flex; 
-            gap: 8px; 
-            align-items: center; 
+        .dice-controls-inline {
+            display: flex;
+            gap: 6px;
+            align-items: center;
         }
-
-        .helper-text {
-            color: var(--text-dim);
-            font-size: 12px;
-            margin: -4px 0 12px 0;
+        .dice-select {
+            padding: 6px;
+            font-size: 13px;
+            width: 110px;
         }
+        /* Specialized highlighted look for active gear modifiers */
+        .dice-select.situational-active {
+            border-color: #00bcd4;
+            background-color: #002b30;
+        }
+        .mod-input {
+            width: 55px !important;
+            padding: 6px;
+            text-align: center;
+            font-weight: bold;
+        }
+        /* Style adjustments when injury trackers are negative numbers */
+        .mod-input.injured {
+            background-color: #4d1a1a;
+            color: #ff8080;
+            border-color: #990000;
+        }
+        .manual-override-text {
+            font-size: 11px;
+            color: #aaa;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .manual-input {
+            width: 50px !important;
+            padding: 4px;
+            font-size: 11px;
+        }
+        .manual-btn {
+            padding: 4px 8px;
+            font-size: 11px;
+            background-color: #555;
+        }
+        .manual-btn:hover { background-color: #444; }
     </style>
 </head>
 <body>
 
-<div class="app-container">
     <h1>Saeculum: Blood Of Ages</h1>
     <h2>Active Dance Tracker</h2>
 
     <div class="controls">
         <button onclick="previousTurn()">▲ Up</button>
-        <div class="current-turn-display">Current TCCC Tick<span>Turn <span id="currentNumber" style="display:inline; font-size:inherit; font-weight:inherit; text-shadow:none;">0</span></span></div>
-        <button onclick="nextTurn()">▼ Down</button>
+        <div class="current-turn-display">Current Combat Turn: <span id="currentNumber">0</span></div>
+        <button onclick="nextTurn()">▼ Down (Next)</button>
     </div>
 
     <div class="turn-list" id="trackerList"></div>
     
-    <div style="text-align: center; margin-top: 16px;">
-        <button class="secondary" style="width: 100%;" onclick="clearCurrentDance()">Reset Current Dance</button>
+    <div style="text-align: center; margin-top: 15px;">
+        <button class="secondary" onclick="clearCurrentDance()">Reset Current Dance</button>
     </div>
 
-    <h3>👥 Combatant Roster</h3>
-    <p class="helper-text">Names persist globally across combat encounters.</p>
+    <h3>👥 Combatant Roster (Keeps Names & Injuries During Battles)</h3>
     
-    <div class="input-group" style="margin-bottom: 16px;">
-        <input type="text" id="newName" placeholder="Character or Monster Name...">
-        <button onclick="addNewToRoster()">Add</button>
+    <div class="section">
+        <p style="margin-top:0; color:#aaa; font-size:14px;">Add a new combatant to your permanent list:</p>
+        <div class="inline-form">
+            <input type="text" id="newName" placeholder="Character or Monster Name">
+            <button onclick="addNewToRoster()">Add to Roster</button>
+        </div>
     </div>
 
     <div class="roster-list" id="rosterContainer"></div>
-</div>
 
     <script>
-        let roster = [];   
-        let timeline = []; 
+        // Internal state
+        let roster = [];   // Holds names, persistent dice ranks, and lingering tracking maluses
+        let timeline = []; // Holds the current active dance turns
         let currentTrackedNumber = 0;
 
         function addNewToRoster() {
@@ -312,12 +206,20 @@
             const name = nameInput.value.trim();
             if (!name) return;
 
+            // Prevent duplicate tracking names
             if (roster.some(c => c.name.toLowerCase() === name.toLowerCase())) {
                 alert("A character with that name already exists!");
                 return;
             }
 
-            roster.push({ name: name });
+            // Standardize default data state properties upon insertion 
+            roster.push({ 
+                name: name,
+                smarts: "6",
+                rapidity: "6",
+                situational: "0", // Default: No situational die
+                modifier: 0
+            });
             nameInput.value = '';
             renderRoster();
         }
@@ -327,30 +229,136 @@
             renderRoster();
         }
 
+        // Live capture updates to keep internal memory clean before re-sorting
+        function updateRosterState(index) {
+            roster[index].smarts = document.getElementById(`smarts-${index}`).value;
+            roster[index].rapidity = document.getElementById(`rapidity-${index}`).value;
+            roster[index].situational = document.getElementById(`situational-${index}`).value;
+            
+            const modVal = parseInt(document.getElementById(`mod-${index}`).value);
+            roster[index].modifier = isNaN(modVal) ? 0 : modVal;
+
+            // Dynamically flag input field styling indicators to track injuries clearly
+            const modInput = document.getElementById(`mod-${index}`);
+            if (roster[index].modifier < 0) {
+                modInput.classList.add('injured');
+            } else {
+                modInput.classList.remove('injured');
+            }
+
+            // Highlight the selection box if a situational/wired reflex die is actively chosen
+            const sitSelect = document.getElementById(`situational-${index}`);
+            if (roster[index].situational !== "0") {
+                sitSelect.classList.add('situational-active');
+            } else {
+                sitSelect.classList.remove('situational-active');
+            }
+        }
+
         function renderRoster() {
             const container = document.getElementById('rosterContainer');
             container.innerHTML = '';
 
             if (roster.length === 0) {
-                container.innerHTML = `<p style="text-align:center; color:#535963; font-size:13px; margin: 10px 0;">No combatants in roster. Add some above!</p>`;
+                container.innerHTML = `<p style="text-align:center; color:#666;">No combatants in roster. Add some above!</p>`;
                 return;
             }
 
             roster.forEach((character, index) => {
                 const row = document.createElement('div');
                 row.className = 'roster-row';
+                
+                // Track injury condition dynamically for color indicators
+                const injuryClass = character.modifier < 0 ? 'mod-input injured' : 'mod-input';
+                // Track if situational die highlight style should be applied initially
+                const sitClass = character.situational !== "0" ? 'dice-select situational-active' : 'dice-select';
+
                 row.innerHTML = `
                     <span class="name">${character.name}</span>
                     <div class="roster-actions">
-                        <div class="input-group">
-                            <input type="number" id="roll-${index}" placeholder="Roll" min="1">
-                            <button onclick="addRollToDance(${index})">Roll In</button>
+                        <div class="dice-roller-group">
+                            <div class="dice-controls-inline">
+                                <select id="smarts-${index}" class="dice-select" title="Smarts Die Selection" onchange="updateRosterState(${index})">
+                                    <option value="4" ${character.smarts === "4" ? "selected" : ""}>Smarts: d4</option>
+                                    <option value="6" ${character.smarts === "6" ? "selected" : ""}>Smarts: d6</option>
+                                    <option value="8" ${character.smarts === "8" ? "selected" : ""}>Smarts: d8</option>
+                                    <option value="10" ${character.smarts === "10" ? "selected" : ""}>Smarts: d10</option>
+                                    <option value="12" ${character.smarts === "12" ? "selected" : ""}>Smarts: d12</option>
+                                </select>
+                                <select id="rapidity-${index}" class="dice-select" title="Rapidity Die Selection" onchange="updateRosterState(${index})">
+                                    <option value="4" ${character.rapidity === "4" ? "selected" : ""}>Rapid: d4</option>
+                                    <option value="6" ${character.rapidity === "6" ? "selected" : ""}>Rapid: d6</option>
+                                    <option value="8" ${character.rapidity === "8" ? "selected" : ""}>Rapid: d8</option>
+                                    <option value="10" ${character.rapidity === "10" ? "selected" : ""}>Rapid: d10</option>
+                                    <option value="12" ${character.rapidity === "12" ? "selected" : ""}>Rapid: d12</option>
+                                </select>
+                                <select id="situational-${index}" class="${sitClass}" title="Situational Gear/Reflex Die" onchange="updateRosterState(${index})">
+                                    <option value="0" ${character.situational === "0" ? "selected" : ""}>Situational: None</option>
+                                    <option value="4" ${character.situational === "4" ? "selected" : ""}>Sit: +d4</option>
+                                    <option value="6" ${character.situational === "6" ? "selected" : ""}>Sit: +d6</option>
+                                    <option value="8" ${character.situational === "8" ? "selected" : ""}>Sit: +d8</option>
+                                    <option value="10" ${character.situational === "10" ? "selected" : ""}>Sit: +d10</option>
+                                    <option value="12" ${character.situational === "12" ? "selected" : ""}>Sit: +d12</option>
+                                </select>
+                                <input type="number" id="mod-${index}" class="${injuryClass}" placeholder="Mod" value="${character.modifier}" oninput="updateRosterState(${index})" title=" Lingering Injury Tracker (Negative Values)">
+                                <button onclick="rollVirtualInitiative(${index})" title="Roll Virtual Exploding Initiative Dice">🎲 Roll</button>
+                            </div>
+                            <div class="manual-override-text">
+                                <span>Or manual score:</span>
+                                <input type="number" id="roll-${index}" class="manual-input" placeholder="Score" min="1">
+                                <button class="manual-btn" onclick="addRollToDance(${index})">Enter</button>
+                            </div>
                         </div>
-                        <button class="delete-btn" onclick="deleteFromRoster(${index})">✕</button>
+                        <button class="delete-btn" onclick="deleteFromRoster(${index})">Delete</button>
                     </div>
                 `;
                 container.appendChild(row);
             });
+        }
+
+        // Simulates rolling a single die with Saeculum's Exploding Dice rules
+        function rollExplodingDie(faces) {
+            let total = 0;
+            let roll = 0;
+            do {
+                roll = Math.floor(Math.random() * faces) + 1;
+                total += roll;
+            } while (roll === faces); // Keep exploding if the highest possible face score is rolled
+            return total;
+        }
+
+        // Processes the mathematical calculation using virtual dice options
+        function rollVirtualInitiative(index) {
+            // Guarantee internal application array has latest settings
+            updateRosterState(index);
+            
+            const character = roster[index];
+            const smartsFaces = parseInt(character.smarts);
+            const rapidityFaces = parseInt(character.rapidity);
+            const situationalFaces = parseInt(character.situational);
+            const modifier = character.modifier; // Value safely persists inside state memory now
+
+            // Execute core attribute rolls using rule book criteria
+            const smartsRoll = rollExplodingDie(smartsFaces);
+            const rapidityRoll = rollExplodingDie(rapidityFaces);
+            
+            // Execute situational reflex roll if one is selected
+            let situationalRoll = 0;
+            if (situationalFaces > 0) {
+                situationalRoll = rollExplodingDie(situationalFaces);
+            }
+            
+            // Equation tally parsing attributes, new situational modifiers, and static adjustments
+            let finalInitiativeScore = smartsRoll + rapidityRoll + situationalRoll + modifier;
+            
+            // Fail-safe protection boundary constraints
+            if (finalInitiativeScore < 1) finalInitiativeScore = 1;
+
+            // Log details cleanly to internal browser window debugging for auditing checks
+            console.log(`Saeculum Roller Calculation [${character.name}]: Smarts(${smartsRoll}) + Rapidity(${rapidityRoll}) + Situational(${situationalRoll}) + Persistent Mod(${modifier}) = Total TCCC Score: ${finalInitiativeScore}`);
+
+            // Direct injection to timeline processing script engine loop 
+            injectScoreToTimeline(character.name, finalInitiativeScore);
         }
 
         function addRollToDance(index) {
@@ -360,39 +368,56 @@
 
             if (isNaN(score) || score <= 0) return;
 
+            injectScoreToTimeline(name, score);
+            rollInput.value = ''; // clear input box
+        }
+
+        // Standard sequence handler used by both manual overrides and virtual processing methods
+        function injectScoreToTimeline(name, score) {
+            // Clear any existing instances of this exact person already in the current active timeline to avoid duplicates
             timeline = timeline.filter(item => item.name !== name);
 
+            // Process the core Subtract 10 rule loop
             while (score > 0) {
+                // Store originalTurnValue alongside turnValue to monitor maximum 5-turn delay limits
                 timeline.push({ name: name, turnValue: score, originalTurnValue: score });
                 score -= 10;
             }
 
+            // Sort sequence from highest turn to lowest
             timeline.sort((a, b) => b.turnValue - a.turnValue);
             
+            // Set clock to highest turn available if starting a fresh sequence
             if (currentTrackedNumber === 0 && timeline.length > 0) {
                 currentTrackedNumber = timeline[0].turnValue;
             }
 
-            rollInput.value = ''; 
             renderActiveDance();
         }
 
         function delayActiveTurnOneTick(timelineIndex) {
             let currentItem = timeline[timelineIndex];
+            
+            // Delays by exactly 1 tick automatically
             let newTurnValue = currentItem.turnValue - 1;
 
+            // Rule constraint verification: Maximum Delay of 5 Combat Turns past original turn number
             let totalDelayed = currentItem.originalTurnValue - newTurnValue;
             if (totalDelayed > 5) {
                 alert(`Action Lost! Delaying further exceeds the limit of 5 Combat Turns past the original turn number (${currentItem.originalTurnValue}).`);
-                timeline.splice(timelineIndex, 1); 
+                timeline.splice(timelineIndex, 1); // Action is lost completely
             } else if (newTurnValue <= 0) {
+                // Fallen out of the current Dance structure entirely
                 timeline.splice(timelineIndex, 1);
             } else {
+                // Update modern turn value state
                 currentItem.turnValue = newTurnValue;
             }
 
+            // Cleanly resort active timeline order matching highest countdown structure
             timeline.sort((a, b) => b.turnValue - a.turnValue);
 
+            // Dynamically balance countdown element view window states after modification adjustments
             if (timeline.length > 0) {
                 let uniqueTurns = [...new Set(timeline.map(item => item.turnValue))];
                 if (!uniqueTurns.includes(currentTrackedNumber)) {
@@ -411,7 +436,7 @@
             listContainer.innerHTML = '';
 
             if (timeline.length === 0) {
-                listContainer.innerHTML = `<p style="text-align:center; color:#535963; font-size:13px; margin:20px 0;">No active combat turns. Input rolls below!</p>`;
+                listContainer.innerHTML = `<p style="text-align:center; color:#666;">No active combat turns. Input rolls below!</p>`;
                 return;
             }
 
@@ -424,8 +449,8 @@
                     row.innerHTML = `
                         <span class="name">${item.name}</span>
                         <div class="roster-actions">
-                            <button class="delay-btn" onclick="delayActiveTurnOneTick(${index})">⏱ Delay</button>
-                            <span class="number">T. ${item.turnValue}</span>
+                            <button class="delay-btn" onclick="delayActiveTurnOneTick(${index})">⏱ Delay 1 Turn</button>
+                            <span class="number">Turn ${item.turnValue}</span>
                         </div>
                     `;
                 } else {
@@ -434,7 +459,7 @@
                     }
                     row.innerHTML = `
                         <span class="name">${item.name}</span>
-                        <span class="number">T. ${item.turnValue}</span>
+                        <span class="number">Turn ${item.turnValue}</span>
                     `;
                 }
 
@@ -478,6 +503,7 @@
             renderActiveDance();
         }
 
+        // Initialize empty lists on load
         renderRoster();
         renderActiveDance();
     </script>
