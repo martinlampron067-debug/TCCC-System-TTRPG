@@ -325,7 +325,10 @@
         
         <div class="summary-panel">
             <h2>Total Character Carried Burden</h2>
-            <div class="weight-display"><span id="total-weight-output">0.00</span> kg</div>
+            <div class="weight-display">
+                <span id="total-weight-output">0.00</span> kg
+                <div style="font-size: 20px; color: #aaa; margin-top: 5px;">(<span id="total-weight-lbs">0.00</span> lbs)</div>
+            </div>
             <div style="margin-bottom: 15px;">
                 <strong>True Maximum Lifting Capacity (Effort Range Limit):</strong> <span id="max-capacity-output">100</span> kg
             </div>
@@ -336,6 +339,7 @@
 </div>
 
 <script>
+    // [The rest of your script database definitions and functions remain unchanged...]
     const eraEquipmentDatabase = {
         "Primitive Era": [
             { name: "Club / Heavy Stick (Melee)", weight: 1.5 },
@@ -712,7 +716,9 @@
         const relicsMass = relicsCount * 3.5;
 
         let grandCarriedMass = baseGearMass + ammoMass + coinMass + billMass + bullionMass + gemMass + heavyBarsMass + cashBackpacksMass + cashDufflesMass + ringsMass + necklacesMass + relicsMass;
+        
         document.getElementById("total-weight-output").textContent = grandCarriedMass.toFixed(2);
+        document.getElementById("total-weight-lbs").textContent = (grandCarriedMass * 2.20462).toFixed(2);
 
         const strRank = parseInt(document.getElementById("strength").value);
         const maxEffortLimit = liftingCapacityMap[strRank];
