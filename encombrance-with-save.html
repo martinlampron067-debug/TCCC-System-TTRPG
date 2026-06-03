@@ -363,7 +363,9 @@
             { name: "Crossbow (Ranged)", weight: 3.8 },
             { name: "Gambeson Padded Cloth Suit (Armor)", weight: 4.0 },
             { name: "Chainmail Hauberk Coat (Armor)", weight: 11.0 },
+            { name: "Chain Shirt (Armor)", weight: 7.0 },
             { name: "Brigandine Plated Vest (Armor)", weight: 9.5 },
+            { name: "Lamellar (Armor)", weight: 15.5 },
             { name: "Half Plate Steel Harness (Armor)", weight: 16.0 },
             { name: "Full Plate Knight Armor suit (Armor)", weight: 25.0 },
             { name: "Bascinet / Kettle Hat Steel Cap (Helmet)", weight: 2.2 },
@@ -373,10 +375,15 @@
         "Renaissance": [
             { name: "Stiletto Concealable Dagger (Melee)", weight: 0.4 },
             { name: "Rapier / Elegant Sidesword (Melee)", weight: 1.1 },
+            { name: "Backsword / Elegant Sidesword (Melee)", weight: 1.5 },
             { name: "Wheel-lock Flintlock Pistol (Firearm)", weight: 1.4 },
             { name: "Arquebus Matchlock Musketeer Gun (Firearm)", weight: 4.5 },
             { name: "Matchlock Heavy Musket (Firearm)", weight: 5.5 },
+            { name: "Main Gauche (Melee)", weight: 0.7 },
+            { name: "Cinquedea (Melee)", weight: 1.1 },
+            { name: "2 Handed Sword (Melee)", weight: 3.0 },
             { name: "Steel cuirass Plate Breastplate (Armor)", weight: 12.0 },
+            { name: "Pikeman Armor (Armor)", weight: 15.0 },
             { name: "Morion Steel Guard Cap (Helmet)", weight: 1.7 }
         ],
         "Far West": [
@@ -481,10 +488,12 @@
     ];
 
     const ammunitionDatabase = [
-        { name: "Arrows / Quiver Bolts (Archery)", roundWt: 0.040, magCapacity: 12, magEmptyWt: 0.30 },
+        { name: "Arrows / Quiver Bolts (Archery)", roundWt: 0.040, magCapacity: 20, magEmptyWt: 0.30 },
+        { name: "Sling Stones (Sling)", roundWt: 0.150, magCapacity: 20, magEmptyWt: 0.17 },
         { name: "Black Powder Shot ball & Powder horn Flask", roundWt: 0.050, magCapacity: 1, magEmptyWt: 0.00 },
         { name: "Pistol / Revolver Ammo (.36 / 9mm / .45 Colt)", roundWt: 0.012, magCapacity: 15, magEmptyWt: 0.15 },
         { name: "Intermediate Rifle Ammo (5.56mm / Carbine)", roundWt: 0.018, magCapacity: 30, magEmptyWt: 0.25 },
+        { name: "Intermediate Rifle Ammo (5.56mm / Linked Box)", roundWt: 0.018, magCapacity: 200, magEmptyWt: 0.35 },
         { name: "Heavy Full-Power Rifle Ammo for 5 Round Mag (7.62mm / .308)", roundWt: 0.028, magCapacity: 5, magEmptyWt: 0.09 },
         { name: "Heavy Full-Power Rifle Ammo for 10 round Mag (7.62mm / .308)", roundWt: 0.028, magCapacity: 10, magEmptyWt: 0.20 },
         { name: "Heavy Full-Power Rifle Ammo for Battle rifle (7.62mm / .308)", roundWt: 0.028, magCapacity: 20, magEmptyWt: 0.30 },
@@ -495,7 +504,9 @@
         { name: "RPR Rocket High-Explosive  (HE / Ordnance)", roundWt: 3.0, magCapacity: 4, magEmptyWt: 0.60 },
         { name: "ATGM (Guided Missile)", roundWt: 15.00, magCapacity: 0, magEmptyWt: 0.60 },
         { name: "Manpad (Fire and Forget Missile)", roundWt: 12.00, magCapacity: 0, magEmptyWt: 0.60 },
-        { name: "Cyberpunk/Sci-Fi Solid Fusion Core (Plasma/Mech Scale)", roundWt: 1.850, magCapacity: 1, magEmptyWt: 0.00 },
+        { name: "Cyberpunk Primitive Laser Battery Backpack", roundWt: 0, magCapacity: 200, magEmptyWt: 40.00 },
+        { name: "Cyberpunk/Railgun slug", roundWt: 0.320, magCapacity: 10, magEmptyWt: 4.00 },
+        { name: "Cyberpunk/Sci-Fi Solid Fusion Core (Plasma/Mech Scale)", roundWt: 1.850, magCapacity: 1, magEmptyWt: 4.00 },
         { name: "High-Capacity Cyberware Energy Battery Pack (Standard Module)", roundWt: 0.350, magCapacity: 3, magEmptyWt: 0.20 }
     ];
 
@@ -590,7 +601,7 @@
         const goldLabel = document.getElementById("gold-label");
         const silverLabel = document.getElementById("silver-label");
         if (["Modern Era", "Cyberpunk", "Sci-Fi"].includes(eraSelect)) {
-            goldLabel.textContent = "High Value Coins / Electronic Credits (Stashes of 10)";
+            goldLabel.textContent = "High Value Coins (Stashes of 10)";
             silverLabel.textContent = "Low Value Coins / Encrypted Data Shards (Stashes of 10)";
         } else if (eraSelect === "Far West") {
             goldLabel.textContent = "Gold Dollars (Stashes of 10)";
