@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Saeculum Blood of Ages: Grimoire</title>
+    <style>
+        body { font-family: 'Georgia', serif; background-color: #2b2b2b; color: #e0d8c3; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        .container { max-width: 500px; width: 100%; }
+        .tab-content { display: none; background: #332f2a; padding: 25px; border: 2px solid #5e5a50; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); margin-bottom: 20px; }
+        .active { display: block; }
+        h1 { color: #d4af37; text-align: center; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
+        h3 { border-bottom: 1px solid #8b0000; padding-bottom: 10px; color: #d4af37; text-align: center; }
+        label { display: block; margin-top: 15px; font-weight: bold; color: #d4af37; }
+        input, select { background: #1a1a1a; color: #e0d8c3; border: 1px solid #5e5a50; padding: 8px; width: 100%; margin-top: 5px; }
+        button { margin-top: 20px; width: 100%; padding: 12px; cursor: pointer; background: #8b0000; color: #f4e4bc; border: none; font-weight: bold; text-transform: uppercase; }
+        .nav-container { width: 100%; max-width: 500px; display: flex; justify-content: space-between; margin-bottom: 10px; }
+        .nav-btn { width: 48%; }
+        .result { margin-top: 20px; padding: 15px; background: #222; border: 1px solid #8b0000; color: #d4af37; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <h1>Magic Calculator</h1>
+    <div class="nav-container">
+        <button class="nav-btn" onclick="showTab('ritual')">Ritual</button>
+        <button class="nav-btn" onclick="showTab('spell')">Sorcery</button>
+    </div>
+
+    <div class="container">
+        <div id="ritual" class="tab-content active">
+            <h3>Ritual Calculator</h3>
+            <label>Magic Attribute (MAG):</label>
+            <input type="number" id="ritMag" value="3">
+            <label>Financial Aid:</label>
+            <select id="ritFinance">
+                <option value="0">Pauper (0)</option>
+                <option value="1">Basic (-1 TV)</option>
+                <option value="2">Substantial (-2 TV)</option>
+                <option value="3">Lavish (-3 TV)</option>
+            </select>
+            <label>Time Pacing (Time Risk):</label>
+            <select id="ritPacing">
+                <option value="4|0">Hasty [+4 TV, 0 Reduction]</option>
+                <option value="2|1">Intense [+2 TV, 1 Reduction]</option>
+                <option value="0|2">Patient [0 TV, 2 Reduction]</option>
+                <option value="-2|3">Extended [-2 TV, 3 Reduction]</option>
+            </select>
+            <label>Duration Need:</label>
+            <select id="ritDuration">
+                <option value="0">Spontaneous (+0)</option>
+                <option value="2">Short 1 dance (+1)</option>
+                <option value="2">Short 1 minute (+2)</option>
+                <option value="4">Moderate 1 hour (+3)</option>
+                <option value="4">Moderate 1 day (+4)</option>
+                <option value="6">Long-Term 1 week (+5)</option>
+                <option value="6">Long-Term 1 month (+6)</option>
+                <option value="8">Semi-Permanent (+8)</option>
+            </select>
+            <label>Intended Power Level:</label>
+            <select id="ritPower">
+                <option value="0|0|1|Minor (1 Stun)">Minor (1 Stun)</option>
+                <option value="0|0|3|Lesser (3 Stun)">Lesser (3 Stun)</option>
+                <option value="0|1|0|Moderate (1 Injury)">Moderate (1 Injury)</option>
+                <option value="0|2|0|Major (2 Injuries)">Major (2 Injuries)</option>
+                <option value="1|0|0|Catastrophic (1 Severe Injury)">Catastrophic (1 Severe Injury)</option>
+            </select>
+            <button onclick="calcRitual()">Calculate Ritual</button>
+            <div id="ritResult" class="result">TV and Drain will appear here...</div>
+        </div>
+
+        <div id="spell" class="tab-content">
+            <h3>Sorcery Spell Builder</h3>
+            <label>Magic Attribute (MAG):</label>
+            <input type="number" id="spellMag" value="3">
+            <label>Component Investment:</label>
+            <select id="spellComp">
+                <option value="0">None (0)</option>
+                <option value="1">Minor (-1)</option>
+                <option value="2">Standard (-2)</option>
+                <option value="3">High Quality (-3)</option>
+            </select>
+            <label>Duration Power Modifier:</label>
+            <select id="spellDur">
+                <option value="0">Instant (0)</option>
+                <option value="2">Concentration (+2)</option>
+                <option value="3">Short-Term 1 dance (+3)</option>
+                <option value="4">Short-Term 1 minute(+4)</option>
+                <option value="5">Medium-Term 30 minute (+5)</option>
+                <option value="5">Medium-Term 1 hour (+6)</option>
+            </select>
+            <label>Penetration (PEN) Rating (+1 TV per level):</label>
+            <input type="number" id="spellPen" value="0">
+            <label>Range Modifier:</label>
+            <select id="spellRange">
+                <option value="0">Touch (0)</option>
+                <option value="1">30m range (+1)</option>
+                <option value="2">Line of Sight (+4)</option>
+                <option value="4">Known Location (+6)</option>
+            </select>
+            <label>Area of Effect (Base Type):</label>
+            <select id="aoeBase">
+                <option value="-1">Self (-1)</option>
+                <option value="0">Single Target (0)</option>
+                <option value="1">3m Bubble or 5m cone (+1)</option>
+            </select>
+            <label>Additional 3m Bubble Increments, 5m cone or additional 30m range (+1 per increment):</label>
+            <input type="number" id="aoeExtra" value="0">
+            <label>Intended Power Level (Base Drain):</label>
+            <select id="spellPowerLevel">
+                <option value="Lesser (1 Stun)">Lesser (1 Stun)</option>
+                <option value="Moderate (3 Stun)">Moderate (3 Stun)</option>
+                <option value="Major (1 Injury)">Major (1 Injury)</option>
+                <option value="Severe (1 Severe Injury)">Severe (1 Severe Injury)</option>
+            </select>
+            <label>Presentation - Voice Bonus:</label>
+            <select id="spellVoice">
+                <option value="0">None (0)</option>
+                <option value="1">Voice (-1)</option>
+                <option value="2">Yelling (-2)</option>
+            </select>
+            <label>Presentation - Gesture Bonus:</label>
+            <select id="spellGest">
+                <option value="0">None (0)</option>
+                <option value="1">Subtle Gesture (-1)</option>
+                <option value="2">Ample Gesture (-2)</option>
+            </select>
+            <button onclick="calcSpell()">Calculate Spell</button>
+            <div id="spellResult" class="result">TV and Drain will appear here...</div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(id) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+
+        function calcRitual() {
+            const mag = parseInt(document.getElementById('ritMag').value);
+            const fin = parseInt(document.getElementById('ritFinance').value);
+            const [pTV, pRed] = document.getElementById('ritPacing').value.split('|').map(Number);
+            const dur = parseInt(document.getElementById('ritDuration').value);
+            const [siVal, iVal, sVal, powerName] = document.getElementById('ritPower').value.split('|');
+            
+            let tv = 13 - mag - fin + pTV + dur;
+            let si = parseInt(siVal), i = parseInt(iVal), s = parseInt(sVal);
+
+            // Drain Reduction Priority logic from image_1e6ea2.png
+            for(let r = 0; r < pRed; r++) {
+                if (si > 0) { si--; i++; }
+                else if (i > 0) { i--; s += 4; }
+                else if (s > 0) { s--; }
+            }
+            
+            if (si === 0 && i === 0 && s < 1) { s = 1; }
+            
+            document.getElementById('ritResult').innerHTML = `<strong>Effect: ${powerName}</strong><br>Final TV: ${tv}<br>Drain Cost: ${si} SI, ${i} I, ${s} Stun`;
+        }
+
+        function calcSpell() {
+            const mag = parseInt(document.getElementById('spellMag').value);
+            const comp = parseInt(document.getElementById('spellComp').value);
+            const dur = parseInt(document.getElementById('spellDur').value);
+            const pen = parseInt(document.getElementById('spellPen').value);
+            const rng = parseInt(document.getElementById('spellRange').value);
+            const aoe = parseInt(document.getElementById('aoeBase').value) + parseInt(document.getElementById('aoeExtra').value);
+            const voice = parseInt(document.getElementById('spellVoice').value); 
+            const gest = parseInt(document.getElementById('spellGest').value); 
+            const power = document.getElementById('spellPowerLevel').value;
+
+            let tv = 13 - mag - comp + dur + pen + rng + aoe - voice - gest;
+            document.getElementById('spellResult').innerHTML = `<strong>Final TV: ${tv}</strong><br>Drain: ${power}`;
+        }
+    </script>
+</body>
+</html>
