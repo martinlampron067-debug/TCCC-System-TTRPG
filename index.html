@@ -77,6 +77,12 @@
             border-radius: 2px;
         }
 
+        /* Contest Specific Styles */
+        .contest-banner { border: 2px solid #8b0000; background: #150000; padding: 25px; margin-bottom: 50px; border-radius: 4px; }
+        .contest-header { display: flex; justify-content: space-between; border-bottom: 1px solid #8b0000; padding-bottom: 10px; margin-bottom: 15px; font-size: 0.85rem; color: #ff4d4d; font-weight: bold; }
+        .contest-title { color: #ff4d4d; margin-top: 0; text-transform: uppercase; letter-spacing: 2px; font-size: 1.4rem; text-align: center; }
+        .contest-alert { border: 1px dashed #ff4d4d; color: #ff4d4d; padding: 10px; font-size: 0.85rem; text-align: center; margin-bottom: 15px; font-weight: bold; }
+
         @media (max-width: 768px) { 
             body { font-size: 18px; } 
             .section { display: block; padding: 20px; } 
@@ -97,6 +103,43 @@
 </header>
 
 <div class="container">
+
+    <!-- BEGIN CONTEST SECTION -->
+    <div class="contest-banner">
+        <div class="contest-header">
+            <span>PROTECTED B // CFHS/SEED</span>
+            <span>DECLASSIFIED / DÉCLASSIFIÉ</span>
+        </div>
+        
+        <h2 class="contest-title" data-key="contest_title">OPORD: OPERATION ARTISTIC SOVEREIGNTY</h2>
+        <p style="text-align: center; color: #888; font-size: 0.9rem; margin-top: -10px; text-transform: uppercase;" data-key="contest_sub">Art Contest / Concours d'Illustration</p>
+        
+        <div class="contest-alert" data-key="contest_ai_ban">
+            ⚠️ WARNING: AI-GENERATED CONTENT IS STRICTLY PROHIBITED. HUMAN ART ONLY.<br>
+            ⚠️ ATTENTION : LE CONTENU GÉNÉRÉ PAR IA EST STRICTEMENT INTERDIT. ART HUMAIN SEULEMENT.
+        </div>
+
+        <p data-key="contest_p">
+            Help define the visual multi-era spectrum of <strong>Saeculum Blood of Ages</strong>. We are actively seeking human-made black & white illustrations mapping themes from Prehistoric survival up to Dark Space Opera.
+        </p>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
+            <div style="flex: 1; min-width: 250px;" data-key="contest_intel_left">
+                <div class="feature-item" style="border-left-color: #8b0000;"><span class="highlight" style="color: #ff4d4d;">TIMELINE:</span> Jump Off (Now) &rarr; Endex (11 Nov 2026)</div>
+                <div class="feature-item" style="border-left-color: #8b0000;"><span class="highlight" style="color: #ff4d4d;">FULL PAGE PRIZE:</span> $100 USD (7 Selected Slots)</div>
+                <div class="feature-item" style="border-left-color: #8b0000;"><span class="highlight" style="color: #ff4d4d;">HALF PAGE PRIZE:</span> $50 USD (30+ Slots Target)</div>
+            </div>
+            <div style="flex: 1; min-width: 250px;" data-key="contest_intel_right">
+                <div class="feature-item" style="border-left-color: #8b0000;"><span class="highlight" style="color: #ff4d4d;">REQUIREMENTS:</span> B&W, Raw Digital Layers Proof Required.</div>
+                <div class="feature-item" style="border-left-color: #8b0000;"><span class="highlight" style="color: #ff4d4d;">SUBMISSION PIPELINE:</span> Post directly as a comment under the pinned operational post on our Facebook Page.</div>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="https://www.facebook.com/SaeculumBloodOfAges?locale=fr_CA" target="_blank" class="btn" style="background: #8b0000; color: #fff; margin-top: 25px;" data-key="contest_btn">Deploy Submission via Facebook</a>
+        </div>
+    </div>
+    <!-- END CONTEST SECTION -->
 
     <h2 style="text-align: center; border: none; margin-bottom: 20px;" data-key="protocol_title">Choose Your Protocol</h2>
     <table class="comparison-table">
